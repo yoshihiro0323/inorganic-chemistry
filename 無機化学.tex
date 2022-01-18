@@ -1,28 +1,28 @@
-\documentclass[dvipdfmx,jb5]{jsarticle}
+\documentclass[dvipdfmx,jb5,twocolumns]{jsarticle}
 \usepackage[top=20truemm,bottom=20truemm,left=20truemm,right=20truemm]{geometry}
 \usepackage{multirow}
 \usepackage[version=3]{mhchem}
 \usepackage{color}
 \usepackage{enumerate}
 \usepackage{tikz}
-\newcommand{\hl}[1]{\underline{\textcolor{red}{#1}}}
-\newcommand{\shl}[1]{\underline{#1}}
+\newcommand{\hl}[1]{\underline{\textcolor{red}{\gtfamily #1}}}
+\newcommand{\shl}[1]{{\bfseries #1}}
 \pagestyle{empty}
 
 \newcommand{\K}{%
   \begin{tikzpicture}[baseline=(A.base),font=\sffamily\small]
-    \node[draw=blue, rectangle, rounded corners=1.5pt,
+    \node[draw=blue, rectangle, rounded corners=2pt,
           text=blue,
-          fill=blue!20!white,
+          fill=blue!10!white,
           line width=.4pt, inner sep=1pt, outer sep=0pt
           ] (A) {工業的製法};
   \end{tikzpicture}%
 }
 \newcommand{\R}{%
   \begin{tikzpicture}[baseline=(A.base),font=\sffamily\small]
-    \node[draw=red, rectangle, rounded corners=1.5pt,
+    \node[draw=red, rectangle, rounded corners=2pt,
           text=red,
-          fill=red!20!white,
+          fill=red!10!white,
           line width=.4pt, inner sep=1pt, outer sep=0pt
           ] (A) {例};
   \end{tikzpicture}%
@@ -58,8 +58,9 @@
    \item 塩素と水素の反応\\
    \shl{\ce{Cl2 + F2 ->[光を当てると爆発的に反応] 2HCl}}
    \item ヨウ素と水素の反応\\
-   \shl{\ce{H2 + I2 <=>[高音で平衡] 2HI}}
+   \shl{\ce{H2 + I2 <=>[高温で平衡] 2HI}}
   \end{itemize}
  \section{貴ガス}
  \section{ハロゲン}
+ \part{金属元素}
 \end{document}
