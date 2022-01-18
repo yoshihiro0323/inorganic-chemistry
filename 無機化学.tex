@@ -1,10 +1,11 @@
-\documentclass[dvipdfmx,jb5,twocolumns]{jsarticle}
+\documentclass[dvipdfmx,a4paper,twocolumn]{jsarticle}
 \usepackage[top=20truemm,bottom=20truemm,left=20truemm,right=20truemm]{geometry}
 \usepackage{multirow}
 \usepackage[version=3]{mhchem}
 \usepackage{color}
 \usepackage{enumerate}
 \usepackage{tikz}
+
 \newcommand{\hl}[1]{\underline{\textcolor{red}{\gtfamily #1}}}
 \newcommand{\shl}[1]{{\bfseries #1}}
 \pagestyle{empty}
@@ -28,12 +29,15 @@
   \end{tikzpicture}%
 }
 
+\columnseprule=0.3mm
+
 \begin{document}
 
+\twocolumn[
 \begin{center}
-\Large{無機化学}
+\Huge{\gtfamily 無機化学}\par
 \end{center}
-
+]
 \part{非金属元素}
  \section{水素}
   \hl{無色無臭}の\hl{気体}\footnote{融点 14K 沸点 20K} \hl{最も軽く}、水に溶け\hl{にくい}
@@ -50,9 +54,25 @@
   \R \;\ce{Zn + 2HCl -> ZnCl2 + H2 ^}
  \end{itemize}
  \subsection{反応}
+ 水素と酸素の反応(爆鳴気の燃焼)\\
+ \quad\shl{\ce{2H2 + O2 -> H2O}}
+ \section{貴ガス}
+ \hl{\ce{He}}, \hl{\ce{Ne}}, \hl{\ce{Ar}}, \hl{\ce{Kr}}, \ce{Xe}, \ce{Rn}
   \begin{itemize}
-   \item 水素と酸素の反応(爆鳴気の燃焼)\\
-   \shl{\ce{2H2 + O2 -> H2O}}
+   \item 第18族元素であり、電子配置がオクテットを満たすため反応性が低い。
+   \item イオン化エネルギーが極めて大きい。
+   \item 電子親和力は\hl{極めて小さい}（\hl{ほぼ０}）。
+   \item 電気陰性度は\hl{定義されない}。
+  \end{itemize}
+  \subsection{ヘリウム \ce{He}}
+  浮揚ガス
+  \subsection{ネオン \ce{Ne}}
+  ネオンサイン
+  \subsection{アルゴン \ce{Ar}}
+  \ce{N2}, \ce{O2}に次いで3番目に空気中での存在量が多い（約1\%）。
+ \section{ハロゲン}
+  \subsection{反応}
+    \begin{itemize}
    \item フッ素と水素の反応\\
    \shl{\ce{H2 + F2 ->[常温で爆発的に反応] 2HF}}
    \item 塩素と水素の反応\\
@@ -60,7 +80,6 @@
    \item ヨウ素と水素の反応\\
    \shl{\ce{H2 + I2 <=>[高温で平衡] 2HI}}
   \end{itemize}
- \section{貴ガス}
- \section{ハロゲン}
+ \newpage
  \part{金属元素}
 \end{document}
