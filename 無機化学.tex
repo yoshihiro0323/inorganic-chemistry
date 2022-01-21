@@ -8,9 +8,10 @@
 \usepackage{lscape}
 \usepackage{amsmath}
 \usepackage{otf}
+\usepackage{chemfig}
 
 \newcommand{\hl}[1]{\underline{\textcolor{red}{\gtfamily #1}}}
-\newcommand{\shl}[1]{{\textcolor{blue}{#1}}}
+\newcommand{\shl}[1]{{\textcolor{blue}{\ce{#1}}}}
 \pagestyle{empty}
 
 \newcommand{\K}{%
@@ -51,9 +52,9 @@
   \begin{itemize}
    \item ナフサの電気分解 \K
   \item 赤熱した\hl{コークス}に\hl{水蒸気}を吹き付ける \K\\
-  \shl{\ce{C + H2O -> H2 + CO}}
+  \shl{C + H2O -> H2 + CO}
   \item \hl{水}(\hl{水酸化ナトリウム水溶液})の電気分解\\
-  \shl{\ce{2H2O -> 2H2 + O2}}
+  \shl{2H2O -> 2H2 + O2}
   \item \hl{イオン化傾向}が\hl{\ce{H2}より大きい}金属と希薄強酸\\
   \R \;\ce{Fe + 2HCl -> FeCl2 + H2 ^}\\
   \R \;\ce{Zn + 2HCl -> ZnCl2 + H2 ^}
@@ -61,11 +62,11 @@
  \subsection{反応}
  \begin{itemize}
   \item 水素と酸素(爆鳴気の燃焼)\\
-  \shl{\ce{2H2 + O2 -> H2O}}
+  \shl{2H2 + O2 -> H2O}
   \item 加熱した酸化銅（\ajRoman{2}）と水素\\
-  \shl{\ce{CuO + H2 -> Cu + H2O}}
+  \shl{CuO + H2 -> Cu + H2O}
   \item 水酸化ナトリウムと水\\
-  \shl{\ce{NaH + H2O -> NaOH + H2}}
+  \shl{NaH + H2O -> NaOH + H2}
  \end{itemize}
  \newpage
  \section{貴ガス}
@@ -80,20 +81,22 @@
   \end{itemize}
   \subsection{生成}
   \ce{_{}^{40}K}の電子捕獲\\
-  \quad\shl{\ce{_{}^{40}K + e- -> _{}^{40}Ar}}
+  \quad\shl{_{}^{40}K + e- -> _{}^{40}Ar}
   \subsection{ヘリウム \ce{He}}
   浮揚ガス
   \subsection{ネオン \ce{Ne}}
   ネオンサイン
   \subsection{アルゴン \ce{Ar}}
   \ce{N2}, \ce{O2}に次いで3番目に空気中での存在量が多い（約1\%）。
+  
  \newpage
  \section{ハロゲン}
-  \subsection{性質}
+  \subsection{単体}
+  \subsubsection{性質}
   \begin{center}
   \rotatebox{90}{
   \begin{tabular}{|c||c|c|c|c|}\hline
-   単体の化学式&\ce{F2}&\ce{Cl2}&\ce{Br2}&\ce{I2}\\ \hline
+   化学式&\ce{F2}&\ce{Cl2}&\ce{Br2}&\ce{I2}\\ \hline
    分子量&\multicolumn{1}{c}{小}&\multicolumn{2}{c}{\ce{<->}}&\multicolumn{1}{c|}{大}\\ \hline
    分子間力(反応性)&\multicolumn{1}{c}{弱（強）}&\multicolumn{2}{c}{\ce{<->}}&\multicolumn{1}{c|}{強（弱）}\\ \hline
    沸点・融点&\multicolumn{1}{c}{低}&\multicolumn{2}{c}{\ce{<->}}&\multicolumn{1}{c|}{高}\\ \hline
@@ -124,69 +127,108 @@
    \begin{tabular}{c}
    \hl{反応しない}\\\hl{\ce{KIaq}には可溶}
    \end{tabular}\\ \hline
+   用途&
+   \begin{tabular}{c}
+   保存が困難\\
+   \ce{Kr}や\ce{Xe}と反応
+   \end{tabular}&
+   \begin{tabular}{c}
+   \hl{\ce{ClO-}}による\\\hl{殺菌・漂白}作用
+   \end{tabular}&
+   \begin{tabular}{c}
+   \ce{C=C}や\\
+   \ce{C#C}の検出
+   \end{tabular}&
+   \begin{tabular}{c}
+   \hl{ヨウ素デンプン}反応で\\
+   \hl{青紫}色
+   \end{tabular}\\ \hline
   \end{tabular}
   }
   \end{center}
-  
-  \subsection{反応（単体）}
+  \subsubsection{製法}
+   \begin{itemize}
+    \item フッ化水素ナトリウム\ce{KHF2}のフッ化水素\ce{HF}溶液の電気分解 \K
+    \item \hl{水酸化ナトリウム}の電気分解 \K\\
+    \shl{2NaCl + 2H2O -> Cl2 + H2 + 2NaOH}
+    \item \hl{酸化マンガン（\ajRoman{4}）}に\hl{濃硫酸}を加えて加熱\\
+    \shl{MnO2 + 4HCl ->[][\Delta] MnCl2 + Cl2 ^ + 2H2O}
+    \item \hl{高度さらし粉}と\hl{塩酸}\\
+    \shl{Ca(ClO)2*2H2O + 4HCl -> CaCl2 + 2Cl2 ^ + 4H2O}
+    \item \hl{さらし粉}と\hl{塩酸}\\
+    \shl{CaCl(ClO)*H2O + 2HCl -> CaCl2 + Cl2 ^ + 2H2O}
+    \item 臭化マグネシウムと塩素\\
+    \ce{MgBr2 + Cl2 -> MgCl2 + Br2}
+    \item ヨウ化カリウムと塩素\\
+    \ce{2KI + Cl2 -> 2KCl + I2}
+   \end{itemize}
+  \subsubsection{反応}
   \begin{itemize}
    \item フッ素と水素\\
-   \shl{\ce{H2 + F2 ->T[常温で爆発的に反応] 2HF}}
+   \shl{H2 + F2 ->T[常温で爆発的に反応] 2HF}
    \item 塩素と水素\\
-   \shl{\ce{H2 + Cl2 ->T[光を当てると爆発的に反応] 2HCl}}
+   \shl{H2 + Cl2 ->T[光を当てると爆発的に反応] 2HCl}
    \item 臭素と水素\\
-   \shl{\ce{H2 + Br2 ->T[高温で反応] 2HBr}}
+   \shl{H2 + Br2 ->T[高温で反応] 2HBr}
    \item ヨウ素と水素\\
-   \shl{\ce{H2 + I2 <=>T[高温で平衡] 2HI}}
+   \shl{H2 + I2 <=>T[高温で平衡] 2HI}
    \item フッ素と水\\
-   \shl{\ce{F2 + H2O ->T[常温で爆発的に反応] 2HF}}
+   \shl{2F2 + 2H2O -> 4HF + O2}
    \item 塩素と水\\
-   \shl{\ce{Cl2 + H2O ->T[光を当てると爆発的に反応] 2HCl}}
+   \shl{Cl2 + H2O <=> HCl + HClO}
    \item 臭素と水\\
-   \shl{\ce{Br2 + H2O ->T[高温で反応] 2HBr}}
-   \item ヨウ素と水\\
-   \shl{\ce{Br2 + H2O <=>T[高温で平衡] 2HI}}
-   \item 臭化マグネシウムと塩素\\
-   \ce{MgBr2 + 2HCl -> 2HBr + MgCl}
-   \item ヨウ化カリウムと塩素\\
-   \ce{2KI + Cl2 -> 2KCl + I2}
-   \item 塩化カリウムと臭素\\
-   \ce{2KCl + Br2 -> 2KBr + Cl2}
+   \shl{Br2 + H2O <=> HBr + HBrO}
+   \item ヨウ素の固体がヨウ化物イオン存在下で三ヨウ化物イオンを形成して溶解する反応\\
+   \shl{I2 + I- -> I3-}
   \end{itemize}
   
-  \subsection{フッ素 \ce{F}}
-   \begin{itemize}
-    \item 保存が困難
-    \item \ce{Kr}や\ce{Xe}と反応
-   \end{itemize}
+  
+  \subsubsection{塩素発生実験の装置}
+  \ce{MnO2 + 4HCl ->[][\Delta] MnCl2 + Cl2 ^ + 2H2O}
+  \ce{Cl2},\ce{HCl},\ce{H2O}\\
+  ↓\\
+  \ce{Cl2},\ce{H2O}\\
+  ↓\\
+  \ce{Cl2}
+  \subsubsection{塩素のオキソ酸}
+  \begin{center}
+  \rotatebox{90}{
+   \begin{tabular}{r|lrl}
+    +\ajRoman{7}&\hl{\ce{HClO4}}&\hl{\quad 過塩素酸}&\chemfig{H-O-Cl(-[:90]O)(-[:-90]O)-O}\\\hline
+    +\ajRoman{5}&\hl{\ce{HClO3}}&\hl{\qquad 塩素酸}&\chemfig{H-O-Cl(-[2]O)-O}\\\hline
+    +\ajRoman{3}&\hl{\ce{HClO2}}&\hl{\quad 亜塩素酸}&\chemfig{H-O-Cl-O}\\\hline
+    +\ajRoman{1}&\hl{\ce{HClO}}&\hl{次亜塩素酸}&\chemfig{H-O-Cl}\\
+   \end{tabular}
+  }
+  \end{center}
+  
+  \subsection{ハロゲン化水素}
+   \subsubsection{性質}
+   \begin{center}
+   \rotatebox{0}{
+   \begin{tabular}{|c||c|c|c|c|}\hline
+   化学式&\ce{HF}&\ce{HCl}&\ce{HBr}&\ce{HI}\\ \hline
+   色・臭い&\multicolumn{4}{|c|}{\hl{無}色\hl{刺激}臭}\\ \hline
+   沸点&$20^\circ$C&$-85^\circ$C&$-67^\circ$C&$-35^\circ$C\\ \hline
+   水との反応&\multicolumn{4}{|c|}{\hl{よく溶ける}}\\ \hline
+   水溶液&\multicolumn{1}{c}{\hl{フッ化水素酸}}&\multicolumn{1}{c}{\hl{塩酸}}&\multicolumn{1}{c}{\hl{臭化水素酸}}&\hl{ヨウ化水素酸}\\
+   （強弱）&
+   \multicolumn{4}{|c|}{
+   
+   \begin{tabular}{ccccccc}
+   \hl{弱酸}&$\ll$&\hl{強酸}&$<$&\hl{強酸}&$<$&\hl{強酸}
+   \end{tabular}
+   }\\ \hline
+   \end{tabular}
+   }
+   \end{center}
    \subsubsection{製法}
-   フッ化水素ナトリウム\ce{KHF2}のフッ化水素\ce{HF}溶液の電気分解 \K
-  
-  \subsection{塩素 \ce{Cl}}
-  　\hl{\ce{ClO-}}による\hl{殺菌・漂白}作用
-  　\subsubsection{製法}
     \begin{itemize}
-     \item \hl{水酸化ナトリウム}の電気分解 \K\\
-     \shl{\ce{2NaCl + 2H2O -> Cl2 + H2 + 2NaOH}}
-     \item \hl{酸化マンガン（\ajRoman{3}）}に\hl{濃硫酸}を加えて加熱\\
-     \shl{\ce{NaCl + H2SO4 -> NaHSO4 + HCl ^}}
-     \item \hl{高度さらし粉}と\hl{塩酸}\\
-     \shl{\ce{CaCl(ClO)*H2O + 2HCl -> CaCl2 + Cl2 ^ + 2H2O}}
-     \item \hl{さらし粉}と\hl{塩酸}\\
-     \shl{\ce{CaCl(ClO)*H2O + 2HCl -> CaCl2 + Cl2 ^ + 2H2O}}
+     \item \hl{ホタル石}に\hl{濃硫酸}を加えて加熱
+     \item \hl{水素}と\hl{塩素} \K
+     \item \hl{塩化ナトリウム}に\hl{濃硫酸}に加えて加熱
     \end{itemize}
-   \subsubsection{塩素のオキソ酸}
-    \begin{tabular}{r|lr}
-     +\ajRoman{7}&\hl{\ce{HClO4}}&\hl{\quad 過塩素酸}\\
-     +\ajRoman{5}&\hl{\ce{HClO3}}&\hl{\qquad 塩素酸}\\
-     +\ajRoman{3}&\hl{\ce{HClO2}}&\hl{\quad 亜塩素酸}\\
-     +\ajRoman{1}&\hl{\ce{HClO}}&\hl{次亜塩素酸}\\
-    \end{tabular}
-  \subsection{臭素 \ce{Br}}
-  \ce{C=C}や\ce{C#C}の検出
-  
-  \subsection{ヨウ素 \ce{I}}
-  \hl{ヨウ素デンプン}反応で\hl{青紫}色
+  \subsection{ハロゲン化銀}
  \newpage
  \twocolumn[
  \part{金属元素}
