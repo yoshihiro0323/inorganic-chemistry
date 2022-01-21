@@ -9,6 +9,9 @@
 \usepackage{amsmath}
 \usepackage{otf}
 \usepackage{chemfig}
+\usepackage{fancyhdr}
+\usepackage{lastpage}
+\usepackage[dvipdfmx]{hyperref}
 
 \newcommand{\hl}[1]{\underline{\textcolor{red}{\gtfamily #1}}}
 \newcommand{\shl}[1]{{\textcolor{blue}{\ce{#1}}}}
@@ -35,14 +38,32 @@
 
 \columnseprule=0.3mm
 
+\pagestyle{fancy}
+\lfoot{無機化学}
+\cfoot{\thepage/\pageref{LastPage}}
+
+\hypersetup{
+ bookmarks=false,
+ colorlinks=true,
+ linkcolor=black,
+ citecolor=[rgb]{0,0.4,0.8},
+ filecolor=black,
+ urlcolor=[rgb]{0,0.4,0.8}
+}
+
 \begin{document}
 
+\thispagestyle{fancy}
 \twocolumn[
 \begin{center}
 \Huge{\gtfamily 無機化学}\\
 \vspace{5mm}
 \end{center}
-\part{非金属元素}
+]
+\hypertarget{top}{\tableofcontents}
+\newpage
+\twocolumn[
+ \part{非金属元素}
 ]
  \section{水素}
   \hl{無色無臭}の\hl{気体}\footnote{融点 14K 沸点 20K} \hl{最も軽く}、水に溶け\hl{にくい}
@@ -245,6 +266,13 @@
      \item \hl{塩化ナトリウム}に\hl{濃硫酸}に加えて加熱（揮発性酸の追い出し）\\
      \shl{NaCl + H2SO4 ->[][\Delta] NaHSO4 + HCl ^}
     \end{itemize}
+   \subsubsection{反応}
+   \begin{itemize}
+    \item 気体のフッ化水素がガラスを侵食する反応\\
+    \shl{SiO2 + 4HF(g) -> SiF4 ^ + 2H2O}
+    \item フッ化水素酸（水溶液）がガラスを侵食する反応\\
+    \shl{SiO2 + 6HF(aq) -> H2SiF6 ^ + 2H2O}
+   \end{itemize}
   \subsection{ハロゲン化銀}
   \subsubsection{性質}
   \begin{center}
@@ -257,6 +285,24 @@
   \end{tabular}
   }
   \end{center}
+  \subsubsection{製法}
+  \begin{itemize}
+   \item 酸化銀（\ajRoman{1}）にフッ化水素酸を加えて蒸発圧縮\\
+   
+   \item ハロゲン化水素イオンを含む水溶液と\hl{}\\
+   
+  \end{itemize}
+  \subsection{次亜塩素酸塩}
+  \subsubsection{性質}
+  
+  \subsubsection{製法}
+  \begin{itemize}
+   \item 水酸化ナトリウム水溶液と塩素\\
+   \shl{2NaOH + Cl2 -> NaCl + NaClO + H2O}
+   \item 水酸化カルシウムと塩素\\
+   \shl{Ca(OH)2 + Cl2 -> CaCl(ClO)*H2O}
+  \end{itemize}
+  \subsection{水素酸カリウム}
  \newpage
  \twocolumn[
  \part{金属元素}
