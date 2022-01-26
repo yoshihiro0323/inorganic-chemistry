@@ -1,4 +1,4 @@
-\documentclass[dvipdfmx,a4paper,twocolumn]{jsarticle}
+\documentclass[dvipdfmx,a4paper]{jsarticle}
 \usepackage[top=20truemm,bottom=20truemm,left=20truemm,right=20truemm]{geometry}
 \usepackage{multirow}
 \usepackage[version=3]{mhchem}
@@ -12,6 +12,7 @@
 \usepackage{fancyhdr}
 \usepackage{lastpage}
 \usepackage[dvipdfmx]{hyperref}
+\usepackage{ascmac}
 
 \newcommand{\hl}[1]{\underline{\textcolor{red}{\gtfamily #1}}}
 \newcommand{\hce}[1]{{\textcolor{blue}{\ce{#1}}}}
@@ -38,7 +39,7 @@
   \end{tikzpicture}%
 }
 
-\columnseprule=0.2mm
+%\columnseprule=0.2mm
 
 \pagestyle{fancy}
 \lfoot{\hyperlink{top}{無機化学}}
@@ -56,17 +57,17 @@
 \begin{document}
 
 \thispagestyle{fancy}
-\twocolumn[
+
 \begin{center}
 \Huge{\gtfamily 無機化学}\\
 \vspace{5mm}
 \end{center}
-]
+
 \hypertarget{top}{\tableofcontents}
 \newpage
-\twocolumn[
+
  \part{非金属元素}
-]
+
  \section{水素}
   \hl{無色無臭}の\hl{気体}\footnote{融点 14K 沸点 20K} \hl{最も軽く}、水に溶け\hl{にくい}
   \subsection{同位体}
@@ -117,7 +118,6 @@
   \subsection{単体}
   \subsubsection{性質}
   \begin{center}
-  \rotatebox{90}{
   \begin{tabular}{|c||c|c|c|c|}\hline
    化学式&\ce{F2}&\ce{Cl2}&\ce{Br2}&\ce{I2}\\ \hline
    分子量&\multicolumn{1}{c}{小}&\multicolumn{2}{c}{\ce{<->}}&\multicolumn{1}{c|}{大}\\ \hline
@@ -167,11 +167,11 @@
    \hl{青紫}色
    \end{tabular}\\ \hline
   \end{tabular}
-  }
   \end{center}
   \subsubsection{製法}
    \begin{itemize}
-    \item フッ化水素ナトリウム\ce{KHF2}のフッ化水素\ce{HF}溶液の電気分解 \K
+    \item フッ化水素ナトリウム\ce{KHF2}のフッ化水素\ce{HF}溶液の電気分解 \K\\
+    \ce{KHF2 -> KF + HF}
     \item \hl{水酸化ナトリウム}の電気分解 \K\\
     \hce{2NaCl + 2H2O -> Cl2 + H2 + 2NaOH}
     \item \hl{酸化マンガン（\ajRoman{4}）}に\hl{濃硫酸}を加えて加熱\\
@@ -208,27 +208,24 @@
   
   \subsubsection{塩素発生実験の装置}
   \ce{MnO2 + 4HCl ->[][\Delta] MnCl2 + Cl2 ^ + 2H2O}
+  \begin{screen}
   \ce{Cl2},\ce{HCl},\ce{H2O}\\
   ↓\hl{\quad 水\quad}に通す （\ce{HCl}の除去）\\
   \ce{Cl2},\ce{H2O}\\
   ↓\hl{濃硫酸}に通す （\ce{H2O}の除去）\\
   \ce{Cl2}
+  \end{screen}
   \subsubsection{塩素のオキソ酸}
-  \begin{center}
-  \rotatebox{90}{
    \begin{tabular}{r|lrl}
     +\ajRoman{7}&\hl{\ce{HClO4}}&\hl{\quad 過塩素酸}&\hlbox{\chemfig{H-O-Cl(-[:90]O)(-[:-90]O)-O}}\\\hline
     +\ajRoman{5}&\hl{\ce{HClO3}}&\hl{\qquad 塩素酸}&\hlbox{\chemfig{H-O-Cl(-[2]O)-O}}\\\hline
     +\ajRoman{3}&\hl{\ce{HClO2}}&\hl{\quad 亜塩素酸}&\hlbox{\chemfig{H-O-Cl-O}}\\\hline
     +\ajRoman{1}&\hl{\ce{HClO}}&\hl{次亜塩素酸}&\hlbox{\chemfig{H-O-Cl}}\\
    \end{tabular}
-  }
-  \end{center}
   
   \subsection{ハロゲン化水素}
    \subsubsection{性質}
    \begin{center}
-   \rotatebox{90}{
    \begin{tabular}{|c||c|c|c|c|}\hline
    化学式&\ce{HF}&\ce{HCl}&\ce{HBr}&\ce{HI}\\ \hline
    色・臭い&\multicolumn{4}{|c|}{\hl{無}色\hl{刺激}臭}\\ \hline
@@ -257,7 +254,6 @@
    \end{tabular}
    \\ \hline
    \end{tabular}
-   }
    \end{center}
    \subsubsection{製法}
     \begin{itemize}
@@ -274,25 +270,23 @@
     \hce{SiO2 + 4HF(g) -> SiF4 ^ + 2H2O}
     \item フッ化水素酸（水溶液）がガラスを侵食する反応\\
     \hce{SiO2 + 6HF(aq) -> H2SiF6 ^ + 2H2O}
+    \item \hl{塩化水素}による\hl{アンモニア}の検出\\
+    \hce{AgO2 + 2HF -> 2AgF + H2O}
    \end{itemize}
   \subsection{ハロゲン化銀}
   \subsubsection{性質}
-  \begin{center}
-  \rotatebox{0}{
   \begin{tabular}{|c||c|c|c|c|}\hline
   化学式&\ce{AgF}&\ce{AgCl}&\ce{AgBr}&\ce{AgI}\\ \hline
   固体の色&\hl{黄褐}色&\hl{白}色&\hl{淡黄}色&\hl{黄}色\\ \hline
   水との反応&\hl{よく溶ける}&\multicolumn{3}{|c|}{\hl{ほとんど溶けない}}\\ \hline
   光との反応&\hl{感光}&\multicolumn{3}{|c|}{感光性（→\hl{\ce{Ag}}）}\\ \hline
   \end{tabular}
-  }
-  \end{center}
   \subsubsection{製法}
   \begin{itemize}
    \item 酸化銀（\ajRoman{1}）にフッ化水素酸を加えて蒸発圧縮\\
-   
+   \hce{Ag2O + 2HF -> 2AgF + H2O}
    \item ハロゲン化水素イオンを含む水溶液と\hl{硝酸銀水溶液}\\
-   
+   \hce{Ag+ + X- -> AgX v}
   \end{itemize}
   \subsection{次亜塩素酸塩}
   \subsubsection{性質}
@@ -306,12 +300,57 @@
    \hce{Ca(OH)2 + Cl2 -> CaCl(ClO)*H2O}
   \end{itemize}
   \subsection{水素酸カリウム}
-  \hl{\ce{KClO3}}
+  化学式：\hl{\ce{KClO3}}
   \subsubsection{性質}
-  \hl{二酸化マンガン}を触媒に加熱\\
-  \quad \hce{KClO3 ->C[MnO2][\Delta] KClO + O2}
+  \hl{酸素}の生成（\hl{二酸化マンガン}を触媒に加熱）\\
+  \quad \hce{2KClO3 ->C[MnO2][\Delta] 2KClO + 3O2 ^}
  \newpage
- \twocolumn[
+ \section{酸素}
+  \subsection{酸素原子}
+  \subsection{酸素}
+   \subsubsection{性質}
+   地球の地殻に\hl{最も多く}存在
+   \begin{itembox}[l]{地球の地殻における元素の存在率}
+   \begin{tabular}{ccccccccccc}
+   \hl{\ce{O}} & \multirow{2}{*}{$>$} & \hl{\ce{Si}} & \multirow{2}{*}{$>$} & \hl{\ce{Al}} & \multirow{2}{*}{$>$} & \hl{\ce{Fe}} & \multirow{2}{*}{$>$} & \hl{\ce{Ca}} & \multirow{2}{*}{$>$} & \hl{\ce{Na}}\\
+   \hl{酸素}&&\hl{ケイ素}&&\hl{アルミニウム}&&\hl{鉄}&&\hl{カルシウム}&&\hl{ナトリウム}\\
+   おっ&&し&&ゃる&&て&&か&&な
+   \end{tabular}
+   \end{itembox}
+   \subsubsection{製法}
+   \begin{itemize}
+    \item \hl{}\K\\
+    \item 過酸化水素の分解\\
+    \hce{2H2O2 ->C[MnO2] O2 ^ + 2H2O}
+    \item 塩素酸カリウムの熱分解\\
+    \hce{2KClO3 ->C[MnO2][\Delta] 2KClO + 3O2 ^}
+   \end{itemize}
+   \subsubsection{反応}
+   \hl{酸化}剤としての反応\\
+   \quad \hce{O2 + 4H+ + 4e- -> 2H2O}
+  \subsection{オゾン}
+   化学式：\hl{\ce{O3}}
+   \subsubsection{性質}
+   \hl{ニンニク}臭（\hl{特異}臭）を持つ\hl{淡青}色の気体（常温）。
+   \subsubsection{製法}
+   酸素中で\hl{無声放電}／強い\hl{紫外線}を当てる\\
+   \quad \hce{3O2 -> 2O3}
+   \subsubsection{反応}
+   \hl{酸化}剤としての反応\\
+   \quad \hce{O3 + 2H+ + 2e- -> O2 + H2O}
+ \section{硫黄}
+  \subsection{硫黄}
+   \subsubsection{性質}
+   \begin{tabular}{|c|c|c|c|}\hline
+   &\hl{斜方硫黄}&\hl{単斜硫黄}&\hl{ゴム状硫黄}\\ \hline
+   色&\hl{}色&\hl{}色&\hl{}色\\ \hline
+   融点&$113^\circ$C&$119^\circ$C&不定\\ \hline
+   \end{tabular}
+  \subsection{硫化水素}
+  \subsection{二酸化硫黄（亜硫酸ガス）}
+  \subsection{硫酸}
+  \subsection{チオ硫酸ナトリウム（ハイポ）}
+ \section{窒素}
+ \newpage
  \part{金属元素}
- ]
 \end{document}
