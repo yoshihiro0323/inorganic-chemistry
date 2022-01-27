@@ -14,6 +14,12 @@
 \usepackage[dvipdfmx]{hyperref}
 \usepackage{ascmac}
 
+\makeatletter
+\def\section{\@startsection {section}{1}{\z@}{-2.5ex plus -1ex minus -.2ex}{2.5 ex plus .2ex}{\Large \bfseries \gtfamily}}
+\def\subsection{\@startsection {subsection}{1}{\z@}{-1.5ex plus -1ex minus -.2ex}{2.3 ex plus .2ex}{\Large \gtfamily}}
+\def\subsubsection{\@startsection {subsubsection}{1}{\z@}{-2.5ex plus -1ex minus -.2ex}{.3 ex plus .2ex}{\large \gtfamily}}
+\makeatother
+
 \newcommand{\hl}[1]{\underline{\textcolor{red}{\gtfamily #1}}}
 \newcommand{\hce}[1]{{\textcolor{blue}{\ce{#1}}}}
 \newcommand{\hlbox}[1]{\fbox{\textcolor{red}{\gtfamily #1}}}
@@ -119,7 +125,7 @@
   \subsubsection{性質}
   \begin{center}
   \begin{tabular}{|c||c|c|c|c|}\hline
-   化学式&\ce{F2}&\ce{Cl2}&\ce{Br2}&\ce{I2}\\ \hline
+   化学式&\ce{F2}&\ce{Cl2}&\ce{Br2}&\ce{I2}\\ \hline\hline
    分子量&\multicolumn{1}{c}{小}&\multicolumn{2}{c}{\ce{<->}}&\multicolumn{1}{c|}{大}\\ \hline
    分子間力(反応性)&\multicolumn{1}{c}{弱（強）}&\multicolumn{2}{c}{\ce{<->}}&\multicolumn{1}{c|}{強（弱）}\\ \hline
    沸点・融点&\multicolumn{1}{c}{低}&\multicolumn{2}{c}{\ce{<->}}&\multicolumn{1}{c|}{高}\\ \hline
@@ -216,12 +222,13 @@
   \ce{Cl2}
   \end{screen}
   \subsubsection{塩素のオキソ酸}
+  オキソ酸$\cdots$\hl{酸素を含む酸性物質}\\\\
    \begin{tabular}{r|lrl}
     +\ajRoman{7}&\hl{\ce{HClO4}}&\hl{\quad 過塩素酸}&\hlbox{\chemfig{H-O-Cl(-[:90]O)(-[:-90]O)-O}}\\\hline
     +\ajRoman{5}&\hl{\ce{HClO3}}&\hl{\qquad 塩素酸}&\hlbox{\chemfig{H-O-Cl(-[2]O)-O}}\\\hline
     +\ajRoman{3}&\hl{\ce{HClO2}}&\hl{\quad 亜塩素酸}&\hlbox{\chemfig{H-O-Cl-O}}\\\hline
     +\ajRoman{1}&\hl{\ce{HClO}}&\hl{次亜塩素酸}&\hlbox{\chemfig{H-O-Cl}}\\
-   \end{tabular}
+   \end{tabular}\\
   
   \subsection{ハロゲン化水素}
    \subsubsection{性質}
@@ -304,6 +311,7 @@
   \subsubsection{性質}
   \hl{酸素}の生成（\hl{二酸化マンガン}を触媒に加熱）\\
   \quad \hce{2KClO3 ->C[MnO2][\Delta] 2KClO + 3O2 ^}
+  
  \newpage
  \section{酸素}
   \subsection{酸素原子}
@@ -321,8 +329,10 @@
   \subsection{酸素}
    化学式：\ce{O2}
    \subsubsection{性質}
-   \hl{無}色\hl{無}臭の\hl{気体}\\
-   沸点 $-183^\circ$C
+   \begin{itemize}
+   \item \hl{無}色\hl{無}臭の\hl{気体}
+   \item 沸点 $-183^\circ$C
+   \end{itemize}
    \subsubsection{製法}
    \begin{itemize}
     \item \hl{液体空気}の\hl{分留} \K
@@ -371,7 +381,8 @@
   \begin{tabular}{|c|c|c|c|}\hline
   &塩基性酸化物&両性酸化物&酸性酸化物\\ \hline
   元素&\hl{陽性}の\hl{大き}い\hl{金属}元素&\hl{陽性}の\hl{小さ}い\hl{金属}元素&\hl{非金属元素}\\ \hline
-  水との反応&\hl{塩基性}&\hl{ほとんど溶けない}&\hl{酸性}
+  水との反応&\hl{塩基性}&\hl{ほとんど溶けない}&\hl{酸性}\\ \hline
+  中和&\hl{酸}と反応&\hl{酸・塩基}と反応&\hl{塩基}と反応\\ \hline
   \end{tabular}
   \begin{enumerate}[\R]
    \item \ce{CO2 + H2O -> H2CO3}
