@@ -13,6 +13,7 @@
 \usepackage{lastpage}
 \usepackage[dvipdfmx]{hyperref}
 \usepackage{ascmac}
+\usepackage{multicol}
 
 \makeatletter
 \def\section{\@startsection {section}{1}{\z@}{-2.5ex plus -1ex minus -.2ex}{2.5 ex plus .2ex}{\Large \bfseries \gtfamily}}
@@ -390,7 +391,7 @@
    \item \ce{3NO2 + H2O -> 2HNO3 + NO}
   \end{enumerate}
   \subsection{水の特異性}
-  \chemfig{H(-[:190,0.7,,,black,line width=2pt,dash pattern=on 1pt off 2pt]O(-[::-40,0.7]H)-[::40,0.7]H)-[:10]O(-[:90,0.9,,,black,line width=2pt,dash pattern=on 1pt off 2pt]H-[:120,0.7]O-[:200,0.7]H)(-[:-10,,,,black,line width=2pt,dash pattern=on 1pt off 2pt]H-[:40,0.7]O-[:-40,0.7]H)-[:-60,0.9]H-[:-60,0.7,,,black,line width=2pt,dash pattern=on 1pt off 2pt]O(-[,0.7]H)-[:-80,0.7]H}
+  \begin{multicols}{2}
   \begin{itemize}
    \item \hl{極性}分子
    \item 周りの4つの分子と\hl{水素}結合
@@ -398,6 +399,11 @@
    \item \hl{隙間の多い}結晶構造（密度：固体\hl{$<$}液体）
    \item 特異な\hl{誘拐曲線}
   \end{itemize}
+  \columnbreak
+  \fbox{
+  \chemfig{H(-[:190,0.7,,,black,line width=2pt,dash pattern=on 1pt off 2pt]O(-[::-40,0.7]H)-[::40,0.7]H)-[:10]O(-[:90,0.9,,,black,line width=2pt,dash pattern=on 1pt off 2pt]H-[:120,0.7]O-[:200,0.7]H)(-[:-10,,,,black,line width=2pt,dash pattern=on 1pt off 2pt]H-[:40,0.7]O-[:-40,0.7]H)-[:-60,0.9]H-[:-60,0.7,,,black,line width=2pt,dash pattern=on 1pt off 2pt]O(-[,0.7]H)-[:-80,0.7]H}
+  }
+  \end{multicols}
  \section{硫黄}
   \subsection{硫黄}
    \subsubsection{性質}
