@@ -1,5 +1,5 @@
 \documentclass[dvipdfmx,a4paper]{jsarticle}
-\usepackage[top=20truemm,bottom=20truemm,left=20truemm,right=20truemm]{geometry}
+\usepackage[top=20truemm,bottom=20truemm,left=15truemm,right=15truemm]{geometry}
 \usepackage{multirow}
 \usepackage[version=3]{mhchem}
 \usepackage{color}
@@ -46,7 +46,7 @@
   \end{tikzpicture}%
 }
 
-%\columnseprule=0.2mm
+\columnseprule=0.2mm
 
 \pagestyle{fancy}
 \lfoot{\hyperlink{top}{無機化学}}
@@ -65,16 +65,18 @@
 
 \thispagestyle{fancy}
 
+\twocolumn
+\twocolumn[
 \begin{center}
 \Huge{\gtfamily 無機化学}\\
 \vspace{5mm}
 \end{center}
-
+]
 \hypertarget{top}{\tableofcontents}
+\twocolumn[
 \newpage
-
  \part{非金属元素}
-
+ ]
  \section{水素}
   \hl{無色無臭}の\hl{気体}\footnote{融点 14K 沸点 20K} \hl{最も軽く}、水に溶け\hl{にくい}
   \subsection{同位体}
@@ -121,6 +123,7 @@
   \ce{N2}, \ce{O2}に次いで3番目に空気中での存在量が多い（約1\%）。
   
  \newpage
+ \onecolumn
  \section{ハロゲン}
   \subsection{単体}
   \subsubsection{性質}
@@ -233,7 +236,7 @@
   
   \subsection{ハロゲン化水素}
    \subsubsection{性質}
-   \begin{center}
+   \begin{table}[hbtp]
    \begin{tabular}{|c||c|c|c|c|}\hline
    化学式&\ce{HF}&\ce{HCl}&\ce{HBr}&\ce{HI}\\ \hline
    色・臭い&\multicolumn{4}{|c|}{\hl{無}色\hl{刺激}臭}\\ \hline
@@ -262,7 +265,7 @@
    \end{tabular}
    \\ \hline
    \end{tabular}
-   \end{center}
+   \end{table}
    \subsubsection{製法}
     \begin{itemize}
      \item \hl{ホタル石}に\hl{濃硫酸}を加えて加熱（\hl{弱酸遊離}）\\
@@ -327,6 +330,7 @@
    \end{tabular}
    \end{itembox}
    
+ \begin{multicols}{2}
   \subsection{酸素}
    化学式：\ce{O2}
    \subsubsection{性質}
@@ -347,7 +351,6 @@
    \subsubsection{反応}
    \hl{酸化}剤としての反応\\
    \quad \hce{O2 + 4H+ + 4e- -> 2H2O}
-
   \subsection{オゾン}
    化学式：\hl{\ce{O3}}
    \subsubsection{性質}
@@ -356,6 +359,7 @@
     \item 水に\hl{少し溶ける}
     \item \hl{殺菌}・\hl{脱臭}作用
    \end{itemize}
+   \columnbreak
    \begin{itembox}[l]{オゾンにおける酸素原子の運動}
    \begin{center}
    \chemfig{\charge{[circle]30=\.,150=\:,270=\:}{O}-[:30,0.6,,,opacity = 0]\charge{[circle]90=\:,210=\.,330=\:}{O}=[:-30,0.6,,,opacity = 0]\charge{[circle]30=\:,150=\:,270=\:}{O}}
@@ -372,19 +376,27 @@
    \item \hl{酸化}剤としての反応\\
    \hce{O3 + 2H+ + 2e- -> O2 + H2O}
    \item 湿らせた\hl{ヨウ化カリウムでんぷん紙}を\hl{青}色に変色\\
+   
    \item 酸化カルシウムと水\\
+   \hce{CaO2 + H2O -> Ca(OH)2}
    \item 二酸化窒素と水\\
+   \hce{NO2 + H2O -> NO(OH)2}
    \item 酸化銅（\ajRoman{2}）と水\\
+   \hce{CuO + H2O -> Cu(OH)2}
    \item 酸化アルミニウムと硫酸\\
+   \hce{Al2O3 + 3H2SO4 -> Al2(SO4)3 + 3H2O}
    \item 酸化アルミニウムと水酸化ナトリウム水溶液\\
+   \hce{Al2O3 + NaOH ->}
    \end{itemize}
+ \end{multicols}
   \subsection{酸化物の分類}
   \begin{tabular}{|c|c|c|c|}\hline
   &塩基性酸化物&両性酸化物&酸性酸化物\\ \hline
   元素&\hl{陽性}の\hl{大き}い\hl{金属}元素&\hl{陽性}の\hl{小さ}い\hl{金属}元素&\hl{非金属元素}\\ \hline
   水との反応&\hl{塩基性}&\hl{ほとんど溶けない}&\hl{酸性}（$\Rightarrow$\hl{オキソ酸}）\\ \hline
   中和&\hl{酸}と反応&\hl{酸・塩基}と反応&\hl{塩基}と反応\\ \hline
-  \end{tabular}
+  \end{tabular}\\
+  両性酸化物$\cdots$\hl{アルミニウム}（\hl{Al}）,\hl{亜鉛}（\hl{Zn}）,\hl{スズ}（\hl{Sn}）,\hl{鉛}（\hl{Pb}）\footnote{覚え方：ああすんなり}
   \begin{enumerate}[\R]
    \item \ce{CO2 + H2O -> H2CO3}
    \item \ce{SO2 + H2O -> H2SO3}
@@ -397,13 +409,12 @@
    \item 周りの4つの分子と\hl{水素}結合
    \item 異常に\hl{高い}沸点
    \item \hl{隙間の多い}結晶構造（密度：固体\hl{$<$}液体）
-   \item 特異な\hl{誘拐曲線}
+   \item 特異な\hl{融解曲線}
   \end{itemize}
   \columnbreak
-  \fbox{
   \chemfig{H(-[:190,0.7,,,black,line width=2pt,dash pattern=on 1pt off 2pt]O(-[::-40,0.7]H)-[::40,0.7]H)-[:10]O(-[:90,0.9,,,black,line width=2pt,dash pattern=on 1pt off 2pt]H-[:120,0.7]O-[:200,0.7]H)(-[:-10,,,,black,line width=2pt,dash pattern=on 1pt off 2pt]H-[:40,0.7]O-[:-40,0.7]H)-[:-60,0.9]H-[:-60,0.7,,,black,line width=2pt,dash pattern=on 1pt off 2pt]O(-[,0.7]H)-[:-80,0.7]H}
-  }
   \end{multicols}
+\twocolumn
  \section{硫黄}
   \subsection{硫黄}
    \subsubsection{性質}
@@ -413,12 +424,23 @@
    色&\hl{黄}色&\hl{黄}色&\hl{黄}色\\ \hline
    構造&\hl{塊状}結晶&\hl{針状}結晶&\hl{不定形}固体\\ \hline
    融点&$113^\circ$C&$119^\circ$C&不定\\ \hline
+   構造&\multicolumn{2}{|c|}{\chemfig{S?-[:-10,0.7]S-[:10,0.7]S-[:-10,0.7]S-[:10,0.7]S-[:-120,1.3]S-[:135]S-[:-135]S?}}&\\ \hline
+   \ce{CS2}との反応&\hl{溶ける}&\hl{溶ける}&\hl{溶けない}\\ \hline
    \end{tabular}\\
+   \ce{CS2}$\cdots$無色・芳香性・揮発性$\Rightarrow$\hl{無極性}触媒
+   \subsubsection{反応}
+   \begin{itemize}
+    \item 高温で多くの金属（\ce{Au}、\ce{Pt}を除く）との反応\\
+    \hce{}
+    \item 空気中で\hl{青}色の炎を上げて燃焼\\
+    \hce{}
+   \end{itemize}
   \subsection{硫化水素}
   \subsection{二酸化硫黄（亜硫酸ガス）}
   \subsection{硫酸}
   \subsection{チオ硫酸ナトリウム（ハイポ）}
  \section{窒素}
- \newpage
- \part{金属元素}
+ \twocolumn
+ \twocolumn[
+ \part{金属元素}]
 \end{document}
