@@ -1,4 +1,5 @@
 \documentclass[dvipdfmx,a4paper]{jsarticle}
+\usepackage[deluxe]{otf}
 \usepackage[top=20truemm,bottom=20truemm,left=15truemm,right=15truemm]{geometry}
 \usepackage{multirow}
 \usepackage[version=3]{mhchem}
@@ -7,7 +8,6 @@
 \usepackage{tikz}
 \usepackage{lscape}
 \usepackage{amsmath}
-\usepackage{otf}
 \usepackage{chemfig}
 \usepackage{fancyhdr}
 \usepackage{lastpage}
@@ -376,17 +376,17 @@
    \item \hl{酸化}剤としての反応\\
    \hce{O3 + 2H+ + 2e- -> O2 + H2O}
    \item 湿らせた\hl{ヨウ化カリウムでんぷん紙}を\hl{青}色に変色\\
-   
+   \hce{O3 + 2KI + H2O -> I2 + O2 + 2KOH}
    \item 酸化カルシウムと水\\
-   \hce{CaO2 + H2O -> Ca(OH)2}
+   \hce{CaO + H2O -> Ca(OH)2}
    \item 二酸化窒素と水\\
-   \hce{NO2 + H2O -> NO(OH)2}
-   \item 酸化銅（\ajRoman{2}）と水\\
-   \hce{CuO + H2O -> Cu(OH)2}
+   \hce{3NO2 + H2O -> 2HNO3 + NO}
+   \item 酸化銅（\ajRoman{2}）と塩化水素\\
+   \hce{CuO + 2HCl -> CuCl2 + H2O}
    \item 酸化アルミニウムと硫酸\\
    \hce{Al2O3 + 3H2SO4 -> Al2(SO4)3 + 3H2O}
    \item 酸化アルミニウムと水酸化ナトリウム水溶液\\
-   \hce{Al2O3 + NaOH ->}
+   \hce{Al2O3 + 2NaOH -> 3H2O ->2Na[Al(OH)+]}
    \end{itemize}
  \end{multicols}
   \subsection{酸化物の分類}
@@ -431,20 +431,91 @@
    \subsubsection{反応}
    \begin{itemize}
     \item 高温で多くの金属（\ce{Au}、\ce{Pt}を除く）との反応\\
-    \hce{}
+    \hce{Fe + S -> FeS}
     \item 空気中で\hl{青}色の炎を上げて燃焼\\
-    \hce{}
+    \hce{S + O2 -> SO2}
    \end{itemize}
   \subsection{硫化水素}
    化学式：\hl{\ce{H2S}}
    \subsubsection{性質}
-   \hl{無}色・\hl{腐卵}臭
+   \begin{itemize}
+    \item \hl{無}色・\hl{腐卵}臭
+    \item \hl{弱酸}性\\$\left\{
+    \begin{tabular}[h]{ll}
+    \hl{\ce{H2S <=> H+ + HS-}}& $K_{1}=9.5\times10^{-8}$ mol/L\\
+    \hl{\ce{HS- <=> H+ + S-}}& $K_{2}=1.3\times10^{-14}$ mol/L
+    \end{tabular}
+    \right.$
+   \end{itemize}
    \subsubsection{製法}
-   
+   \begin{itemize}
+    \item 酸化鉄（\ajRoman{2}）と希塩酸\\
+    \hce{FeS + 2HCl -> FeCl2 + H2S ^}
+    \item 酸化鉄（\ajRoman{2}）と希硫酸\\
+    \hce{FeS + H2SO4 -> FeSO4 + H2S ^}
+   \end{itemize}
    \subsubsection{反応}
   \subsection{二酸化硫黄（亜硫酸ガス）}
+  化学式：\hl{\ce{SO2}}
+  \subsubsection{性質}
+  \begin{itemize}
+   \item \hl{無}色、\hl{刺激}臭の\hl{気体}
+   \item 水に\hl{溶けやすい}
+   \item \hl{弱酸}性\\
+    \begin{tabular}{ll}
+    \hl{\ce{H2O + SO2 <=> H+ + HSO3-}}& $K_{1}=1.4\times10^{-2}$ mol/L\\
+    \end{tabular}
+   \item \hl{還元}剤（\hl{漂白}作用）\\
+   \hce{SO2 + 2H2O -> SO4^2- + 4H+ + 2e-}
+   \item \hl{酸化}剤（\hl{\ce{H2S}}などの強い還元剤に対して）\\
+   \hce{SO2 + 4H+ + 4e- -> S + 2H2O}
+  \end{itemize}
+  \subsubsection{製法}
+  \begin{itemize}
+   \item 硫黄や硫化物の\hl{燃焼} \K
+   \item \hl{亜硫酸ナトリウム}と{希硫酸}\\
+   \hce{Na2SO3 + H2SO4 ->[][\Delta] NaHSO4 + SO2 ^ + H2O}
+   \item \hl{銅}と\hl{熱濃硫酸}\\
+   \hce{Cu + H2SO4 -> CuO + SO2 + H2O}
+  \end{itemize}
+  \subsubsection{反応}
+  \begin{itemize}
+   \item 二酸化硫黄の水への溶解\\
+   \hce{SO2 + H2O -> H2SO3}
+   \item 二酸化硫黄と硫化水素\\
+   \hce{SO2 + 2H2S -> 3S + 3H2O}
+  \end{itemize}
   \subsection{硫酸}
+  \subsubsection{性質}
+  \begin{itemize}
+   \item \hl{無}色\hl{無}臭の\hl{液体}
+   \item \hl{不揮発}性
+   \item 密度が\hl{大き}い
+   \item \hl{粘度}が大きい
+  \end{itemize}
+  \subsubsection{製法}
+  \begin{itembox}[l]{\hl{接触}法 \K}
+  \begin{enumerate}
+   \item \hce{S + O2 -> SO2}
+   \item \hce{2SO2 + O2 ->C[V2O5] 2SO3}
+   \item \hce{SO3 + H2O -> H2SO4}
+  \end{enumerate}
+  \end{itembox}
   \subsection{チオ硫酸ナトリウム（ハイポ）}
+  
+  \onecolumn
+  \subsection{重金属の硫化物}
+  \begin{tabular}{|cccccc|cccc|} \hline
+  \multicolumn{6}{|c|}{酸性でも沈澱（全液性で沈澱）}&\multicolumn{4}{|c|}{中性・塩基性で沈澱（酸性では溶解）}\\ \hline
+  \ce{Ag2S}&\ce{HgS}&\ce{CuS}&\ce{PbS}&\ce{SnS}&\ce{CdS}&\ce{NiS}&\ce{FeS}&\ce{ZnS}&\ce{MnS}\\
+  \hl{黒}色&\hl{黒}色&\hl{黒}色&\hl{黒}色&\hl{褐}色&\hl{黒}色&\hl{黒}色&\hl{黒}色&\hl{白}色&\hl{淡赤}色\\ \hline
+  \multicolumn{10}{c}{
+  \begin{tabular}{ccc}
+  \hl{低}&イオン化傾向&\hl{高}\\
+  \hl{極小}&塩の溶解度積($K_{sp}$)&\hl{小}
+  \end{tabular}
+  }
+  \end{tabular}
  \section{窒素}
  \twocolumn
  \twocolumn[
