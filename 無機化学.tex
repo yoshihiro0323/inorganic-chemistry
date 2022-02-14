@@ -4,6 +4,7 @@
 \usepackage{multirow}
 \usepackage[version=3]{mhchem}
 \usepackage{color}
+\usepackage[dvipsnames]{xcolor}
 \usepackage{enumerate}
 \usepackage{tikz}
 \usepackage{lscape}
@@ -27,24 +28,17 @@
 
 \pagestyle{empty}
 
-\newcommand{\K}{%
+\newcommand{\stamp}[2]{%
   \begin{tikzpicture}[baseline=(A.base),font=\sffamily\small]
-    \node[draw=blue, rectangle, rounded corners=2pt,
-          text=blue,
-          fill=blue!10!white,
+    \node[draw=#1, rectangle, rounded corners=2pt,
+          text=#1,
+          fill=#1!10!white,
           line width=.4pt, inner sep=1pt, outer sep=0pt
-          ] (A) {工業的製法};
+          ] (A) {#2};
   \end{tikzpicture}%
 }
-\newcommand{\R}{%
-  \begin{tikzpicture}[baseline=(A.base),font=\sffamily\small]
-    \node[draw=red, rectangle, rounded corners=2pt,
-          text=red,
-          fill=red!10!white,
-          line width=.4pt, inner sep=1pt, outer sep=0pt
-          ] (A) {例};
-  \end{tikzpicture}%
-}
+\newcommand{\K}{\stamp{blue}{工業的製法}}
+\newcommand{\R}{\stamp{red}{例}}
 
 \columnseprule=0.2mm
 
@@ -473,11 +467,12 @@
   \end{itemize}
   \subsubsection{製法}
   \begin{itemize}
-   \item 硫黄や硫化物の\hl{燃焼} \K
+   \item 硫黄や硫化物の\hl{燃焼} \K\\
+   \hce{2H2S + 3O2 -> 2SO2 + 2H2O}
    \item \hl{亜硫酸ナトリウム}と{希硫酸}\\
    \hce{Na2SO3 + H2SO4 ->[][\Delta] NaHSO4 + SO2 ^ + H2O}
    \item \hl{銅}と\hl{熱濃硫酸}\\
-   \hce{Cu + H2SO4 -> CuO + SO2 + H2O}
+   \hce{Cu + 2H2SO4 -> CuSO4 + SO2 ^ + 2H2O}
   \end{itemize}
   \subsubsection{反応}
   \begin{itemize}
@@ -490,16 +485,29 @@
   \subsubsection{性質}
   \begin{itemize}
    \item \hl{無}色\hl{無}臭の\hl{液体}
-   \item \hl{不揮発}性
-   \item 密度が\hl{大き}い
-   \item \hl{粘度}が大きい
+   \item 水に\hl{非常によく溶ける}
+   \item 溶解熱が\hl{非常に大きい}
+   \item \hl{水に濃硫酸}を加えて希釈
+   \item \hl{不揮発}性で密度が\hl{大き}く、\hl{粘度}が大きい \stamp{violet}{濃硫酸}
+   \item \hl{吸湿性}・\hl{脱水作用} \stamp{violet}{濃硫酸}
+   \item \hl{強酸性} \stamp{purple}{希硫酸}\\
+   $\left(
+   \begin{tabular}{cc}
+   \hl{\ce{H2SO4 <=> H+ + HSO4-}}& $K_{1}>10^8$mol/L
+   \end{tabular}
+   \right)$
+   \item \hl{弱酸性} \stamp{violet}{濃硫酸}
   \end{itemize}
   \subsubsection{製法}
   \begin{itembox}[l]{\hl{接触}法 \K}
   \begin{enumerate}
-   \item \hce{S + O2 -> SO2}
-   \item \hce{2SO2 + O2 ->C[V2O5] 2SO3}
-   \item \hce{SO3 + H2O -> H2SO4}
+   \item 黄鉄鉱\ce{FeS2}の燃焼\\
+   \hce{4FeS2 + 11O2 -> 2Fe2O3 + 8SO2}\\
+   $\left(\hce{S + O2 -> SO2}\right)$
+   \item \hl{酸化バナジウム}触媒で酸化\\
+   \hce{2SO2 + O2 ->C[V2O5] 2SO3}
+   \item \hl{濃硫酸}に吸収させて\hl{発煙硫酸}とした後、希硫酸を加えて希釈\\
+   \hce{SO3 + H2O -> H2SO4}
   \end{enumerate}
   \end{itembox}
   \subsection{チオ硫酸ナトリウム（ハイポ）}
