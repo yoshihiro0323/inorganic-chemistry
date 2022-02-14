@@ -57,6 +57,9 @@
 
 \begin{document}
 
+%\setchemfig{debug=true}
+%\setcharge{debug}
+
 \thispagestyle{fancy}
 
 \twocolumn
@@ -514,7 +517,25 @@
   \end{enumerate}
   \end{itembox}
   \subsection{チオ硫酸ナトリウム（ハイポ）}
-  化学式：\hl{\ce{Na2S2O3}}
+  化学式：\hl{\ce{Na2S2O3}}\\\\
+  電子式：\chemfig{H-[,0.5,,,opacity=0]\charge{[circle]0=\:,90=\:,180=\:,270=\:}{O}-[,0.5,,,opacity=0]S(-[2,0.5,,,opacity=0]\charge{[circle]0=\:,90=\:,180=\:,270=\:}{O})(-[-2,0.5,,,opacity=0]\charge{[circle]0=\:,90=\:,180=\:,270=\:}{O})-[,0.5,,,opacity=0]\charge{[circle]0=\:,90=\:,180=\:,270=\:}{O}-[,0.5,,,opacity=0]H}\\
+  \begin{tabular}{cc}
+  \chemfig{O^{-}-[,0.8]S(-[2,0.7,,,-latex]O)(-[-2,0.7,,,-latex]O)-[,0.8]O^{-}}&\chemfig{S^{-}-[,0.8]S(-[2,0.7,,,-latex]O)(-[-2,0.7,,,-latex]O)-[,0.8]O^{-}}\\
+  \hl{硫酸}イオン&\hl{チオ硫酸}イオン
+  \end{tabular}
+  \subsubsection{性質}
+   \begin{itemize}
+    \item 無色透明の結晶（5水和物）で、水に溶けやすい。
+    \item \hl{還元}剤として反応\\
+    \R 水道水の脱塩素剤（カルキ抜き）\\
+    \hl{\ce{2S2O3^2- -> S4O6 + 2e-}}\\\\
+\chemfig{\charge{[circle]0=\:,90=\:,180=\:,270=\:,135[circle,anchor=180+\chargeangle]={\tiny $\ominus$}}{O}-[,0.5,,,opacity=0]S(-[2,0.5,,,opacity=0]\charge{[circle]0=\:,90=\:,180=\:,270=\:}{O})(-[-2,0.5,,,opacity=0]\charge{[circle]0=\:,90=\:,180=\:,270=\:}{O})-[,0.5,,,opacity=0]\charge{[circle]0=\:,90=\:,180=\:,270=\:,45[circle,anchor=180+\chargeangle]={\tiny $\ominus$}}{S}}
+  \quad
+\chemfig{\charge{[circle]0=\:,90=\:,180=\:,270=\:,135[circle,anchor=180+\chargeangle]={\tiny $\ominus$}}{S}-[,0.5,,,opacity=0]S(-[2,0.5,,,opacity=0]\charge{[circle]0=\:,90=\:,180=\:,270=\:}{O})(-[-2,0.5,,,opacity=0]\charge{[circle]0=\:,90=\:,180=\:,270=\:}{O})-[,0.5,,,opacity=0]\charge{[circle]0=\:,90=\:,180=\:,270=\:,45[circle,anchor=180+\chargeangle]={\tiny $\ominus$}}{O}}
+ \quad \tikz \draw[->] (0,0)--(0.7,0); \quad
+\chemfig{\charge{[circle]0=\:,90=\:,180=\:,270=\:,135[circle,anchor=180+\chargeangle]={\tiny $\ominus$}}{O}-[,0.5,,,opacity=0]S(-[2,0.5,,,opacity=0]\charge{[circle]0=\:,90=\:,180=\:,270=\:}{O})(-[-2,0.5,,,opacity=0]\charge{[circle]0=\:,90=\:,180=\:,270=\:}{O})-[,0.5,,,opacity=0]\charge{[circle]0=\:,90=\:,180=\:,270=\:}{S}-[,0.5,,,opacity=0]\charge{[circle]0=\:,90=\:,270=\:}{S}-[,0.5,,,opacity=0]S(-[2,0.5,,,opacity=0]\charge{[circle]0=\:,90=\:,180=\:,270=\:}{O})(-[-2,0.5,,,opacity=0]\charge{[circle]0=\:,90=\:,180=\:,270=\:}{O})-[,0.5,,,opacity=0]\charge{[circle]0=\:,90=\:,180=\:,270=\:,45[circle,anchor=180+\chargeangle]={\tiny $\ominus$}}{O}}
+  \end{itemize}
+  \subsubsection{製法}
   \onecolumn
   \subsection{重金属の硫化物}
   \begin{tabular}{|cccccc|cccc|} \hline
