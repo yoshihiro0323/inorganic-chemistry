@@ -1,0 +1,306 @@
+% 先生に確認したところ、反応物を見て(生成物は提示されていなくとも)反応式を書ける必要があるそうです。したがって、生成物の名前を省いていることが多々あります。
+\documentclass[b5j,11pt]{ltjsarticle}
+\usepackage{tcolorbox}
+\usepackage{tikz}
+\usepackage{luatexja-otf}
+\usepackage{luatexja-fontspec}
+\usepackage[version=4]{mhchem}
+\usepackage[top=12truemm,left=12truemm,right=13truemm,bottom=12truemm]{geometry}
+\setmainjfont[BoldFont=hiragino-kaku-gothic-pro-w6]{hiragino-kaku-gothic-pro-w3}
+\newcommand{\stamp}[2]{%
+  \begin{tikzpicture}[baseline=(A.base),font=\sffamily\large]
+    \node[draw=#1, rectangle, rounded corners=2pt,
+          text=black!60!white,
+          fill=black!10!white,
+          line width=.4pt, inner sep=1pt, outer sep=0pt
+          ] (A) {#2};
+  \end{tikzpicture}%
+}
+\newcommand{\K}{\stamp{gray}{工}}
+\newcommand{\hl}[1]{\text{#1}}
+\newcommand{\R}[1]{{\textcolor{red}{\ce{#1}}}}
+\newcommand{\G}[1]{{\textcolor{white}{\ce{#1}}}}
+\newcounter{switch}
+\setcounter{switch}{2 }
+\newcommand{\hce}[1]{
+    \ifnum\theswitch=1
+        \ce{#1}
+    \else
+        \ifnum\theswitch=2
+            \R{#1}
+        \else
+            \G{#1}
+    \fi
+}
+\newtcolorbox{mybox}[1]{title=\large #1,colback=white}
+\parindent = 0pt
+\renewcommand{\baselinestretch}{1.2}
+\begin{document}
+\pagestyle{empty}
+\section{非金属元素}
+\subsection{水素}
+\begin{mybox}{赤熱した\hl{コークス}に\hl{水蒸気}を吹き付ける \K}
+\hce{C + H2O -> H2 + CO}
+\end{mybox}
+\begin{mybox}{\hl{水}(\hl{水酸化ナトリウム水溶液})の電気分解}
+\hce{2H2O -> 2H2 + O2}
+\end{mybox}
+\begin{mybox}{金属（鉄と亜鉛）と希薄強酸（塩酸）}
+\hce{Fe + 2HCl -> FeCl2 + H2 ^}\\
+\hce{Zn + 2HCl -> ZnCl2 + H2 ^}
+\end{mybox}
+\begin{mybox}{\ce{H2}の可燃性(爆鳴気)}
+\hce{2H2 + O2 -> H2O}
+\end{mybox}
+\begin{mybox}{加熱した酸化銅（\ajRoman{2}）と水素}
+\hce{CuO + H2 -> Cu + H2O}
+\end{mybox}
+\begin{mybox}{水素ナトリウムと水}
+\hce{NaH + H2O -> NaOH + H2}
+\end{mybox}
+\subsection{貴ガス}
+\begin{mybox}{\ce{_{}^{40}K}の電子捕獲}
+\hce{_{}^{40}K + e- -> _{}^{40}Ar}
+\end{mybox}
+\subsection{ハロゲン}
+\begin{mybox}{\hl{塩化ナトリウム水溶液}の電気分解 \K}
+\hce{2NaCl + 2H2O -> Cl2 + H2 + 2NaOH}
+\end{mybox}
+\begin{mybox}{\hl{酸化マンガン（\ajRoman{4}）}に\hl{濃塩酸}を加えて加熱}
+\hce{MnO2 + 4HCl ->[][\Delta] MnCl2 + Cl2 ^ + 2H2O}
+\end{mybox}
+\begin{mybox}{\hl{高度さらし粉}と\hl{塩酸}}
+\hce{Ca(ClO)2*2H2O + 4HCl -> CaCl2 + 2Cl2 ^ + 4H2O}
+\end{mybox}
+\begin{mybox}{\hl{さらし粉}と\hl{塩酸}}
+\hce{CaCl(ClO)*H2O + 2HCl -> CaCl2 + Cl2 ^ + 2H2O}
+\end{mybox}
+\begin{mybox}{臭化マグネシウムと塩素}
+\hce{MgBr2 + Cl2 -> MgCl2 + Br2}
+\end{mybox}
+\begin{mybox}{ヨウ化カリウムと塩素}
+\hce{2KI + Cl2 -> 2KCl + I2}
+\end{mybox}
+\begin{mybox}{塩化カリウムと臭素}
+\hce{\text{何も起きない}}
+\end{mybox}
+\begin{mybox}{フッ素と水素}
+\hce{H2 + F2 ->T[常温で爆発的に反応] 2HF}
+\end{mybox}
+\begin{mybox}{塩素と水素}
+\hce{H2 + Cl2 ->T[光を当てると爆発的に反応] 2HCl}
+\end{mybox}
+\begin{mybox}{臭素と水素}
+\hce{H2 + Br2 ->T[高温で反応] 2HBr}
+\end{mybox}
+\begin{mybox}{ヨウ素と水素}
+\hce{H2 + I2 <=>T[高温で平衡] 2HI}
+\end{mybox}
+\begin{mybox}{フッ素と水}
+\hce{2F2 + 2H2O -> 4HF + O2}
+\end{mybox}
+\begin{mybox}{塩素と水}
+\hce{Cl2 + H2O <=> HCl + HClO}
+\end{mybox}
+\begin{mybox}{臭素と水}
+\hce{Br2 + H2O <=> HBr + HBrO}
+\end{mybox}
+\begin{mybox}{ヨウ素の固体がヨウ化物イオン存在下で溶解する反応}
+\hce{I2 + I- -> I3-}
+\end{mybox}
+\begin{mybox}{\hl{ホタル石}に\hl{濃硫酸}を加えて加熱（\hl{弱酸遊離}）}
+\hce{CaF2 + H2SO4 ->[][\Delta] CaSO4 + 2HF ^}
+\end{mybox}
+\begin{mybox}{\hl{水素}と\hl{塩素} \K}
+\hce{H2 + Cl2 -> 2HCl ^}
+\end{mybox}
+\begin{mybox}{\hl{塩化ナトリウム}に\hl{濃硫酸}を加えて加熱（\hl{弱酸}酸・\hl{揮発性}酸の追い出し）}
+\hce{NaCl + H2SO4 ->[][\Delta] NaHSO4 + HCl ^}
+\end{mybox}
+\begin{mybox}{気体のフッ化水素がガラスを侵食する反応}
+\hce{SiO2 + 4HF(g) -> SiF4 ^ + 2H2O}
+\end{mybox}
+\begin{mybox}{フッ化水素酸（水溶液）がガラスを侵食する反応}
+\hce{SiO2 + 6HF(aq) -> H2SiF6 ^ + 2H2O}
+\end{mybox}
+\begin{mybox}{\hl{塩化水素}による\hl{アンモニア}の検出}
+\hce{HCl + NH3 -> NH4Cl}
+\end{mybox}
+\begin{mybox}{酸化銀（\ajRoman{1}）にフッ化水素酸を加えて蒸発圧縮}
+\hce{Ag2O + 2HF -> 2AgF + H2O}
+\end{mybox}
+\begin{mybox}{ハロゲン化水素イオンを含む水溶液と\hl{硝酸銀水溶液}}
+\hce{Ag+ + X- -> AgX v}
+\end{mybox}
+\begin{mybox}{水酸化ナトリウム水溶液と塩素}
+\hce{2NaOH + Cl2 -> NaCl + NaClO + H2O}
+\end{mybox}
+\begin{mybox}{水酸化カルシウムと塩素}
+\hce{Ca(OH)2 + Cl2 -> CaCl(ClO)*H2O}
+\end{mybox}
+\begin{mybox}{次亜塩素酸:\hl{酸化}剤として反応（\hl{殺菌}・\hl{漂白}作用）}
+\hce{ClO- + 2H+ + 2e- -> H2O + Cl-}
+\end{mybox}
+\begin{mybox}{塩素酸カリウムによる\hl{酸素}の生成（\hl{二酸化マンガン}を触媒に加熱）}
+\hce{2KClO3 ->C[MnO2][\Delta] 2KClO + 3O2 ^}
+\end{mybox}
+\subsection{酸素}
+\begin{mybox}{\hl{水}（\hl{水酸化ナトリウム水溶液}）の\hl{電気分解}}
+\hce{2H2O -> 2H2 ^ + O2 ^}
+\end{mybox}
+\begin{mybox}{\hl{過酸化水素水}（\hl{オキシドール}）の分解}
+\hce{2H2O2 ->C[MnO2] O2 ^ + 2H2O}
+\end{mybox}
+\begin{mybox}{\hl{塩素酸カリウム}の熱分解}
+\hce{2KClO3 ->C[MnO2][\Delta] 2KClO + 3O2 ^}
+\end{mybox}
+\begin{mybox}{酸素の\hl{酸化}剤としての反応}
+\hce{O2 + 4H+ + 4e- -> 2H2O}
+\end{mybox}
+\begin{mybox}{オゾン生成:酸素中で\hl{無声放電}／強い\hl{紫外線}を当てる}
+\hce{3O2 -> 2O3}
+\end{mybox}
+\begin{mybox}{オゾンの\hl{酸化}剤としての反応}
+\hce{O3 + 2H+ + 2e- -> O2 + H2O}
+\end{mybox}
+\begin{mybox}{オゾンが湿らせた\hl{ヨウ化カリウムでんぷん紙}を\hl{青}色に変色}
+\hce{O3 + 2KI + H2O -> I2 + O2 + 2KOH}
+\end{mybox}
+\begin{mybox}{酸化カルシウムと水}
+\hce{CaO + H2O -> Ca(OH)2}
+\end{mybox}
+\begin{mybox}{二酸化窒素と水}
+\hce{3NO2 + H2O -> 2HNO3 + NO}
+\end{mybox}
+\begin{mybox}{酸化銅（\ajRoman{2}）と塩化水素}
+\hce{CuO + 2HCl -> CuCl2 + H2O}
+\end{mybox}
+\begin{mybox}{酸化アルミニウムと硫酸}
+\hce{Al2O3 + 3H2SO4 -> Al2(SO4)3 + 3H2O}
+\end{mybox}
+\begin{mybox}{酸化アルミニウムと水酸化ナトリウム水溶液}
+\hce{Al2O3 + 2NaOH -> 3H2O ->2Na[Al(OH)+]}
+\end{mybox}
+\begin{mybox}{二酸化炭素と水酸化ナトリウム}
+\hce{CO2 + 2NaOH -> Na2CO3 + H2O}
+\end{mybox}
+\subsection{硫黄}
+\begin{mybox}{高温で多くの金属（\ce{Au}、\ce{Pt}を除く）との反応（鉄と硫黄を混ぜて加熱）}
+    \hce{Fe + S -> FeS}
+\end{mybox}
+\begin{mybox}{硫黄が空気中で\hl{青}色の炎を上げて燃焼}
+    \hce{S + O2 -> SO2}
+\end{mybox}
+\begin{mybox}{酸化鉄（\ajRoman{2}）と希塩酸}
+    \hce{FeS + 2HCl -> FeCl2 + H2S ^}
+\end{mybox}
+\begin{mybox}{酸化鉄（\ajRoman{2}）と希硫酸}
+    \hce{FeS + H2SO4 -> FeSO4 + H2S ^}
+\end{mybox}
+\begin{mybox}{硫化水素とヨウ素}
+\hce{H2S + I2 -> S + 2HI}
+\end{mybox}
+\begin{mybox}{酢酸鉛（\ajRoman{4}）水溶液と硫化水素（難溶性の塩）}
+\hce{(CH3COO)2Pb + H2S -> PbS + 2CH3COOH}
+\end{mybox}
+\begin{mybox}{二酸化硫黄の\hl{還元}剤としての反応（\hl{漂白}作用）}
+    \hce{SO2 + 2H2O -> SO4^2- + 4H+ + 2e-}
+\end{mybox}
+\begin{mybox}{二酸化硫黄の\hl{酸化}剤としての反応}
+    \hce{SO2 + 4H+ + 4e- -> S + 2H2O}
+\end{mybox}
+\begin{mybox}{硫化水素の燃焼}
+    \hce{2H2S + 3O2 -> 2SO2 + 2H2O}
+\end{mybox}
+\begin{mybox}{\hl{亜硫酸ナトリウム}と{希硫酸}}
+    \hce{Na2SO3 + H2SO4 ->[][\Delta] NaHSO4 + SO2 ^ + H2O}
+\end{mybox}
+\begin{mybox}{\hl{銅}と\hl{熱濃硫酸}}
+    \hce{Cu + 2H2SO4 -> CuSO4 + SO2 ^ + 2H2O}
+\end{mybox}
+\begin{mybox}{二酸化硫黄の水への溶解}
+    \hce{SO2 + H2O -> H2SO3}
+\end{mybox}
+\begin{mybox}{二酸化硫黄と硫化水素}
+    \hce{SO2 + 2H2S -> 3S + 3H2O}
+\end{mybox}
+\begin{mybox}{硫酸酸性で過マンガン酸カリウムと二酸化硫黄}
+    \hce{2KMnO4 + 5SO2 + 2H2O -> 2MnSO4 + 2H2SO4 + K2SO4}
+\end{mybox}
+\begin{mybox}{接触法}
+    黄鉄鉱\ce{FeS2}の燃焼\\
+    \hce{4FeS2 + 11O2 -> 2Fe2O3 + 8SO2}\\
+    \hl{酸化バナジウム}触媒で酸化\\
+    \hce{2SO2 + O2 ->C[V2O5] 2SO3}\\
+    \hl{濃硫酸}に吸収させて\hl{発煙硫酸}とした後、希硫酸を加えて希釈\\
+    \hce{SO3 + H2O -> H2SO4}
+\end{mybox}
+\begin{mybox}{硝酸カリウムに濃硫酸を加えて加熱}
+    \hce{KNO3 + H2SO4 -> HNO3 + KHSO4}
+\end{mybox}
+\begin{mybox}{スクロースと濃硫酸}
+    \hce{C12H22O11 ->C[H2SO4] 12C + 11H2O}
+\end{mybox}
+\begin{mybox}{希硫酸と水酸化ナトリウム}
+    \hce{H2SO4 + 2NaOH -> Na2SO4 + 2H2O}
+\end{mybox}
+\begin{mybox}{銀と熱濃硫酸}
+    \hce{2Ag + 2H2SO4 -> Ag2SO4 + SO2 + 2H2O}
+\end{mybox}
+\begin{mybox}{塩化バリウム水溶液と希硫酸}
+    \hce{BaCl2 + H2SO4 -> BaSO4 v + 2HCl}
+\end{mybox}
+\begin{mybox}{亜硫酸ナトリウム水溶液に硫黄を加えて加熱}
+    \hce{Na2SO4 + S_{$n$} -> Na2S2O3}
+\end{mybox}
+\begin{mybox}{ヨウ素とチオ硫酸ナトリウム}
+    \hce{I2 + 2Na2S2O3 -> 2NaI + Na2S4O6}
+\end{mybox}
+\subsection{窒素}
+\begin{mybox}{\hl{亜硝酸アンモニウム}の\hl{熱分解}}
+    \hce{NH4NO2 -> N2 + 2H2O}
+\end{mybox}
+\begin{mybox}{窒素と酸素}
+    \hce{N2 + 2O2 -> 2NO2}
+    $\left\{
+        \begin{tabular}{r}
+        \hce{N2 + O2 -> 2NO}\phantom{${}_{2}$}\\
+        \hce{2NO + O2 -> 2NO2}
+        \end{tabular}
+    \right.$
+\end{mybox}
+\begin{mybox}{窒素とマグネシウム}
+    \hce{3Mg + N2 -> Mg3N2}
+\end{mybox}
+\begin{mybox}{\hl{ハーバーボッシュ法}（\hl{低}温\hl{高}圧で、\hl{四酸化三鉄}（\hl{\ce{Fe3O4}}）触媒）}
+    \hce{N2 + 3H2 <=> 2NH3}
+\end{mybox}
+\begin{mybox}{\hl{塩化アンモニウム}と\hl{水酸化カルシウム}を混ぜて加熱}
+    \hce{2NH4Cl + Ca(OH)2 -> 2NH3 ^ + CaCl2 +2H2O}
+\end{mybox}
+\begin{mybox}{硫酸とアンモニア}
+    \hce{2NH3 + H2SO4 -> (NH4)2SO4}
+\end{mybox}
+\begin{mybox}{塩素の検出}
+    \hce{NH3 + HCl -> NH4Cl v}
+\end{mybox}
+\begin{mybox}{アンモニアと二酸化炭素}
+    \hce{2NH3 + CO2 -> (NH2)2CO + H2O}
+\end{mybox}
+\begin{mybox}{\hl{硝酸アンモニウム}の熱分解}
+    \hce{NH4NO3 ->[][\Delta] N2O + 2H2O}
+\end{mybox}
+\begin{mybox}{\hl{銅}と\hl{希硝酸}}
+    \hce{3Cu + 8HNO3 -> 3Cu(NO3)2 + 2NO + 4H2O}
+\end{mybox}
+\begin{mybox}{一酸化窒素と酸素が反応}
+    \hce{2NO + O2 -> 2NO2}
+\end{mybox}
+\begin{mybox}{\hl{銅}と\hl{濃硝酸}}
+    \hce{Cu + 4HNO3 -> Cu(NO3)2 + 2NO2 + 2H2O}
+\end{mybox}
+\begin{mybox}{二酸化窒素と水の反応}
+冷水:\hce{2NO2 + H2O -> HNO3 + HNO2}\\
+温水:\hce{3NO2 + H2O -> 2HNO3 + NO}
+\end{mybox}
+\end{document}
