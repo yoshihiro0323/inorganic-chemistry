@@ -8,16 +8,16 @@
 \newcommand{\hce}[1]{\textcolor{blue}{¥ce{#1}}}
 \newcommand{\hlbox}[1]{\fbox{\textcolor{red}{\gtfamily #1}}}
 ```
-内の*red*や*blue*の値を*white*にしたり、
+内の`red`や`blue`の値を`white`にしたり、
 ```
 \newcommand{\hl}[1]{\underline{\textcolor{white}{\gtfamily #1}}}
 ```
-*\phantom*などで囲むことで空欄にできます。
+`\phantom`などで囲むことで空欄にできます。
 ```
 \newcommand{\hl}[1]{\underline{\phantom{\gtfamily #1}}}
 ```
 前者だと改行が反映されますが、テキスト自体が白になっているだけなので選択することがきてしまいます。後者だとテキスト自体は隠れますが、改行が反映されません。
-*\hl* は河川が赤くなっている文字、*\hce* は青で表示されている化学式、*\hbox* は視覚で囲まれている構造式・電子式です。
+`\hl`は河川が赤くなっている文字、`\hce`は青で表示されている化学式、`\hbox`は視覚で囲まれている構造式・電子式です。
 ## 内容
 ### 無機化学
 無機化学のテキストを少し変更したもの
@@ -46,5 +46,5 @@
 - tikz
 - xcolor
 
-化学式は全て*mhchem*を使用しています。電子式などは*chemfig*を利用しています。
-PDF内のジャンプ用に*hyperref*を使用しています。
+化学式は全て`mhchem`を使用しています。電子式などは`chemfig`を利用しています。
+PDF内のジャンプ用に`hyperref`を使用しています。
