@@ -6,6 +6,8 @@
 \usepackage{luatexja-fontspec}
 \usepackage[version=4]{mhchem}
 \usepackage[top=12truemm,left=12truemm,right=13truemm,bottom=12truemm]{geometry}
+\usepackage{enumitem}
+\setlist{nosep}
 \setmainjfont[BoldFont=hiragino-kaku-gothic-pro-w6]{hiragino-kaku-gothic-pro-w3}
 \newcommand{\stamp}[2]{%
   \begin{tikzpicture}[baseline=(A.base),font=\sffamily\large]
@@ -21,7 +23,7 @@
 \newcommand{\R}[1]{{\textcolor{red}{\ce{#1}}}}
 \newcommand{\G}[1]{{\textcolor{white}{\ce{#1}}}}
 \newcounter{switch}
-\setcounter{switch}{2 }
+\setcounter{switch}{0}
 \newcommand{\hce}[1]{
     \ifnum\theswitch=1
         \ce{#1}
@@ -179,7 +181,7 @@
 \hce{Al2O3 + 3H2SO4 -> Al2(SO4)3 + 3H2O}
 \end{mybox}
 \begin{mybox}{酸化アルミニウムと水酸化ナトリウム水溶液}
-\hce{Al2O3 + 2NaOH -> 3H2O ->2Na[Al(OH)+]}
+\hce{Al2O3 + 2NaOH -> 3H2O + 2Na[Al(OH)+]}
 \end{mybox}
 \begin{mybox}{二酸化炭素と水酸化ナトリウム}
 \hce{CO2 + 2NaOH -> Na2CO3 + H2O}
@@ -302,5 +304,21 @@
 \begin{mybox}{二酸化窒素と水の反応}
 冷水:\hce{2NO2 + H2O -> HNO3 + HNO2}\\
 温水:\hce{3NO2 + H2O -> 2HNO3 + NO}
+\end{mybox}
+\begin{mybox}{オストワルト法}
+    \hce{NH3 + 2O2 -> HNO3 + H2O}\\
+    手順
+    \begin{enumerate}
+     \setlength{\itemsep}{-2pt}
+     \item \hl{白金}触媒で\hl{アンモニア}を\hl{酸化}\\
+      \hce{4NH3 + 5O2 -> 4NO + 6H2O}
+     \item \hl{空気酸化}\\
+      \hce{2NO + O2 -> 2NO2}
+     \item \hl{水}と反応\\
+      \hce{3NO2 + H2O -> 2HNO3 + NO}
+    \end{enumerate}
+\end{mybox}
+\begin{mybox}{\hl{硝酸塩}に\hl{濃硫酸}を加えて加熱}
+    \hce{NaNO3 + H2SO4 -> NaHSO4 + HNO3}
 \end{mybox}
 \end{document}
