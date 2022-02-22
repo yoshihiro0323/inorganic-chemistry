@@ -770,16 +770,17 @@
   毒性&\hl{猛毒}&\hl{微毒}&\hl{微毒}\\ \hline
   構造&
   \chemfig{P(-[:45,0.8]P?[a])(-[:-30,0.8]P?[a]?[b])-[,,,,black,line width=0.5pt,dash pattern=on 1pt off 0.7pt]P?[a]?[b]}&
-  \chemfig{-[,0.6,,,black,line width=0.5pt,dash pattern=on 2pt off 1.4pt]P(-[:45,0.8]P?[a])(-[:-30,0.8]P?[a]?[b])-[,,,,black,line width=0.5pt,dash pattern=on 1pt off 0.7pt]P?[a]?[b]-[,0.6]P(-[:45,0.8]P?[c])(-[:-30,0.8]P?[c]?[d])-[,,,,black,line width=0.5pt,dash pattern=on 1pt off 0.7pt]P?[c]?[d]-[,0.6,,,black,line width=0.5pt,dash pattern=on 2pt off 1.4pt]}&省略\\ \hline
+  \chemfig{-[,0.6,,,black,line width=0.5pt,dash pattern=on 2pt off 1.4pt]P(-[:45,0.8]P?[a])(-[:-30,0.8]P?[a]?[b])-[,,,,black,line width=0.5pt,dash pattern=on 1pt off 0.7pt]P?[a]?[b]-[,0.6]P(-[:45,0.8]P?[c])(-[:-30,0.8]P?[c]?[d])-[,,,,black,line width=0.5pt,dash pattern=on 1pt off 0.7pt]P?[c]?[d]-[,0.6,,,black,line width=0.5pt,dash pattern=on 2pt off 1.4pt]}&略\\ \hline
   \ce{CS2}への溶解&\hl{溶ける}&\hl{溶けない}&\hl{溶けない} \\ \hline
   \end{tabular}
   \subsubsection{製法}
   \begin{itemize}
-   \item リン鉱石にケイ砂とコークスを混ぜて強熱し、蒸気を水で冷却 \stamp{yellow}{黄リン} \K\\
+   \item リン鉱石にケイ砂とコークスを混ぜて強熱し、蒸気を水で冷却 \stamp{Goldenrod}{黄リン} \K\\
    
    \item 空気を遮断して黄リンを$250^{\circ}$Cで加熱 \stamp{red}{赤リン}
    \item 空気を遮断して黄リンを$200^{\circ}$C、$1.2\times10^9$Paで加熱 \stamp{black}{黒リン}
   \end{itemize}
+\begin{multicols*}{2}
   \subsection{十酸化四リン}
   化学式：\hl{\ce{P4O10}}
   \subsubsection{性質}
@@ -787,15 +788,30 @@
    \item 白色で昇華性のある固体
    \item \hl{潮解性}（水との親和性が\hl{非常に高い}）
    \item {乾燥}剤
-   \item 水を加えて加熱すると反応（加水分解）\\
+   \item 水を加えて加熱すると反応（\hl{加水分解}）
   \end{itemize}
   \subsubsection{製法}
   \hl{リンの燃焼}\\
+  
+  \subsubsection{反応}
+  水を加えて加熱\\
   \subsection{リン酸}
   化学式：\hl{\ce{H3PO4}}
   \subsubsection{性質}
-  
+  \hl{中酸性}\\
+   $\left(
+   \begin{tabular}{ll}
+    \hl{\ce{H3PO4 <=> H+ H2PO4-}}&$K_{1}=7.5\times10^{-3}$ mol/L\\
+   \end{tabular}
+   \right)$
   \subsubsection{反応}
+  \begin{itemize}
+   \item リン酸カルシウムとリン酸が反応して重過リン酸石灰が生成\\
+   
+   \item リン酸カルシウムと硫酸が反応して過リン酸石灰が生成\\
+   
+  \end{itemize}
+\end{multicols*}
  \part{典型金属}
  \section{アルカリ金属}
  \subsection{単体}
@@ -839,8 +855,18 @@
  \end{tabular}\\\hline
  \end{tabular}
  \subsubsection{製法}
- 水酸化物や塩化物の\hl{溶融塩電解} \K
- 
+ 水酸化物や塩化物の\hl{溶融塩電解}（\hl{ダウンズ}法） \K\\
+ \hl{\ce{CaCl2}}添加（\hl{凝固点降下}）\\
+ \hce{2NaCl -> 2Na + Cl2 ^}
+ \subsubsection{反応}
+ \begin{itemize}
+  \item ナトリウムと酸素\\
+  \hce{4Na + O2 -> 2Na2O}
+  \item ナトリウムと塩素\\
+  \hce{2Na + Cl2 -> 2NaCl}
+  \item ナトリウムと水\\
+  \hce{2Na + 2H2O -> 2NaOH + H2 ^}
+ \end{itemize}
  \subsection{水酸化ナトリウム（苛性ソーダ）}
  化学式：\hl{\ce{NaOH}}
  \subsubsection{性質}
@@ -850,13 +876,34 @@
    \item 水によくとける（水との親和性が\hl{非常に高い}）
    \item \hl{乾燥}剤
    \item 強塩基性\\
-   \hl{\ce{NaOH <=> Na+ + OH-}} $K_{1} = 1.0\times10^{-1}$mol/L
+   $\left(
+   \begin{tabular}{ll}
+   \hl{\ce{NaOH <=> Na+ + OH-}}&$K_{1} = 1.0\times10^{-1}$mol/L
+   \end{tabular}
+   \right)$
+   \item 空気中の\hl{二酸化炭素}と反応して、純度が不明\\
+   酸の標準溶液（\hl{シュウ酸}）を用いた中和滴定で濃度決定\\
+   $\left(
+   \begin{tabular}{l}
+   \hce{(COOH)2 + 2 NaOH -> (COONa)2 + 2H2O}
+   \end{tabular}
+   \right)$
   \end{itemize}
  \subsubsection{製法}
- \hl{水酸化ナトリウム水溶液}の\hl{電気分解} \K
+ \hl{水酸化ナトリウム水溶液}の\hl{電気分解}（イオン交換膜法） \K\\
+ \hce{2NaCl + 2H2O -> 2NaOH + H2 ^ + Cl2 ^}
  \subsubsection{反応}
  \begin{itemize}
-  \item hoge
+  \item 塩酸と水酸化ナトリウム\\
+  \hce{HCl + NaOH -> NaCl + H2O}
+  \item 塩素と水酸化ナトリウム\\
+  \hce{2NaOH + Cl2 -> NaCl + NaClO + H2O}
+  \item 二酸化硫黄と水酸化ナトリウム\\
+  \hce{SO2 + 2NaOH -> Na2SO3 + H2O}
+  \item 酸化亜鉛と水酸化ナトリウム水溶液\\
+  \hce{ZnO + 2NaOH + H2O -> Na2[Zn(OH)4]}
+  \item 二酸化炭素と水酸化ナトリウム\\
+  \hce{2NaOH + CO2 -> Na2CO3 + H2O}
  \end{itemize}
  
  \onecolumn
