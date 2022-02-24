@@ -1,4 +1,4 @@
-\documentclass[dvipdfmx,a4paper]{jsarticle}
+\documentclass[dvipdfmx,a4paper,16pt]{jsarticle}
 \usepackage[deluxe]{otf}
 \usepackage[top=20truemm,bottom=20truemm,left=15truemm,right=15truemm]{geometry}
 \usepackage{multirow}
@@ -22,9 +22,19 @@
 \def\subsubsection{\@startsection {subsubsection}{1}{\z@}{-2.5ex plus -1ex minus -.2ex}{.3 ex plus .2ex}{\large \gtfamily}}
 \makeatother
 
-\newcommand{\hl}[1]{\underline{\textcolor{red}{\gtfamily #1}}}
-\newcommand{\hce}[1]{\textcolor{blue}{\ce{#1}}}
-\newcommand{\hlbox}[1]{\fbox{\textcolor{red}{\gtfamily #1}}}
+\newcommand{\blank}[2]{%
+  \begin{tikzpicture}[baseline=(text.base)]
+    \node[draw=black, rectangle, rounded corners=2pt,
+          text=black,
+          fill=black!10!white,
+          line width=.5pt, inner sep=1pt, outer sep=0pt
+          ] (text) {#1};
+    \draw[line width=.5pt] (text.south)--([xshift=#2]text.south);
+  \end{tikzpicture}
+}
+\newcommand{\hl}[1]{\underline{\textcolor{red}{\gtfamily #1}}}\newcommand{\hce}[1]{\textcolor{blue}{\ce{#1}}}\newcommand{\hlbox}[1]{\fbox{\textcolor{red}{\gtfamily #1}}}
+\newcounter{answer}
+%\newcommand{\hl}[1]{\addtocounter{answer}{1}\blank{\arabic{answer}}{24pt}}\newcommand{\hce}[1]{\textcolor{white}{\ce{#1}}}\newcommand{\hlbox}[1]{\fbox{\phantom{#1}}}
 
 \pagestyle{empty}
 
@@ -801,7 +811,7 @@
   \hl{中酸性}\\
    $\left(
    \begin{tabular}{ll}
-    \hl{\ce{H3PO4 <=> H+ H2PO4-}}&$K_{1}=7.5\times10^{-3}$ mol/L\\
+    \hl{\ce{H3PO4 <=> H+ + H2PO4-}}&$K_{1}=7.5\times10^{-3}$ mol/L\\
    \end{tabular}
    \right)$
   \subsubsection{反応}
@@ -812,7 +822,24 @@
    
   \end{itemize}
 \end{multicols*}
- \part{典型金属}
+ \section{炭素}
+ \subsection{炭素}
+ \subsubsection{性質}
+ 炭素の同\hl{素}体は、\hl{ダイアモンド}、\hl{黒鉛}（\hl{グラファイト}）etc...\\
+ \begin{tabular}{|c||c|c|}\hline
+ 名称&\hl{ダイアモンド}&\hl{黒鉛}\\ \hline
+ 特徴&\hl{無}色\hl{透明}で屈折率が大きい固体&\hl{黒}色で\hl{光沢}がある固体\\ \hline
+ 密度&3.5g/cm$^3$&2.3g/cm$^3$\\ \hline
+ 構造&\hl{正四面体}方向の\hl{共有結合}結晶&\hl{ズレた層状}構造\\ \hline
+ 電気伝導性&\hl{なし}&\hl{あり}\\ \hline
+ 用途&宝石・カッターの刃・研磨剤&鉛筆・電極\\ \hline
+ \end{tabular}
+ \subsection{一酸化炭素}
+ \subsection{二酸化炭素}
+ \section{ケイ素}
+ \subsection{二酸化ケイ素}
+\newpage
+\part{典型金属}
  \section{アルカリ金属}
  \subsection{単体}
  \subsubsection{性質}
