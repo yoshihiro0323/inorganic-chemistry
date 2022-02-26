@@ -15,6 +15,7 @@
 \usepackage[dvipdfmx]{hyperref}
 \usepackage{ascmac}
 \usepackage{multicol}
+\usetikzlibrary{calc}
 
 \makeatletter
 \def\section{\@startsection {section}{1}{\z@}{-2.5ex plus -1ex minus -.2ex}{2.5 ex plus .2ex}{\Large \bfseries \sffamily}}
@@ -22,17 +23,18 @@
 \def\subsubsection{\@startsection {subsubsection}{1}{\z@}{-2.5ex plus -1ex minus -.2ex}{.3 ex plus .2ex}{\large \sffamily}}
 \makeatother
 
-\newcommand{\blank}[2]{%
-  \begin{tikzpicture}[baseline=(text.base)]
-    \node[draw=black, rectangle, rounded corners=2pt,
+\newcommand{\answer}[1]{\!
+  \begin{tikzpicture}[baseline=(num.base),font=\sffamily\small]
+   \node[draw=black, rectangle, rounded corners=2pt,
           text=black,
-          fill=black!10!white,
-          line width=.5pt, inner sep=1pt, outer sep=0pt
-          ] (text) {#1};
-    \draw[line width=.5pt] (text.south)--([xshift=#2]text.south);
-  \end{tikzpicture}
+          line width=.5pt, inner sep=2pt, outer sep=0pt
+          ] (num){\addtocounter{answer}{1}\arabic{answer}};
+   \node [right, inner sep=1pt, outer sep=0pt] (text) at (num.east){#1};
+   \draw [line width=.5pt, outer sep=0pt] (num.south)--($(text.base east)-(num.base west)+(num.south)+(-4pt,0)$);
+  \end{tikzpicture}%
 }
-\newcommand{\hl}[1]{\underline{\textcolor{red}{\gtfamily #1}}}\newcommand{\hce}[1]{\textcolor{blue}{\ce{#1}}}\newcommand{\hlbox}[1]{\fbox{\textcolor{red}{\gtfamily #1}}}
+
+\newcommand{\hl}[1]{\answer{\textcolor{red}{#1}}}\newcommand{\hce}[1]{\textcolor{blue}{\ce{#1}}}\newcommand{\hlbox}[1]{\fbox{\textcolor{red}{\gtfamily #1}}}
 \newcounter{answer}
 %\newcommand{\hl}[1]{\addtocounter{answer}{1}\blank{\arabic{answer}}{24pt}}\newcommand{\hce}[1]{\textcolor{white}{\ce{#1}}}\newcommand{\hlbox}[1]{\fbox{\phantom{#1}}}
 
@@ -943,8 +945,60 @@
  用途&\hl{ガラス}や石鹸の原料&胃腸薬・ふくらし粉\\ \hline
  \end{tabular}
  \subsubsection{製法}
- \hl{アンモニアソーダ法}（\hl{ソルベー法}）\K
+\begin{itembox}[l]{\hl{アンモニアソーダ法}（\hl{ソルベー法}）\K}
+\begin{tikzpicture}[box/.style={draw=black, rectangle, rounded corners=4pt, line width=1pt, inner sep=5pt, outer sep=0pt},arrow/.style={-latex,very thick}]
+ \node[box, right, fill=orange!20!white] (CaCO3) {\ce{CaCO3}};
+ \node[box, right] (CaO) at(3,0){\ce{CaO}};
+ \node[box, right] (CaOH2) at(6,0){\ce{Ca(OH)2}};
+ \node[box, right, fill=blue!10!white] (CaCl2) at(9,0){\ce{CaCl2}};
+ \draw[arrow, red] (CaCO3.east)--(CaO.west);
+ \draw[arrow, blue] (CaO.east)--(CaOH2.west);
+ \draw[arrow, dashed] (CaOH2.east)--(CaCl2.west);
  
+ \coordinate (1) at ($(CaCO3.east)!0.5!(CaO.west)$);
+ \node[box] (CO2) at ([yshift=-15mm]1){\ce{CO2}};
+ 
+ \coordinate (2) at ($(CaO.east)!0.5!(CaOH2.west)$);
+ \node[box] (H2O) at ([yshift=-15mm]2){\ce{H2O}};
+ \draw[arrow, red] (1)--(CO2.north);
+ \draw[arrow, blue] (2)--(H2O.north);
+ \node[box, right, fill=green!10!white] (NaCl) at(0,-3) {\ce{NaCl}};
+ \node[box, right] (NaHCO3) at(3,-3){\ce{NaHCO3}};
+ \node[box, right] (Na2CO3) at(6,-3){\ce{Na2CO3}};
+ \draw[arrow, green!75!black] (NaCl.east)--(NaHCO3.west);
+ \draw[arrow, orange] (NaHCO3.east)--(Na2CO3.west);
+ 
+ \coordinate (3-1) at ($(NaCl.east)!0.25!(NaHCO3.west)$);
+ \coordinate (3-3) at ($(NaCl.east)!0.75!(NaHCO3.west)$);
+ \coordinate (4-2) at ($(NaHCO3.east)!0.5!(Na2CO3.west)$);
+ \draw[arrow, green!75!black] (CO2.south)--($(NaCl.east)!(CO2.south)!(NaHCO3.west)$);
+ \node[box] (NH3) at ([yshift=-15mm]3-1){\ce{NH3}};
+ \draw[arrow, green!75!black] (NH3.north)--(3-1.south);
+ \node[box] (NH4Cl) at ([yshift=-15mm]4-2){\ce{NH4Cl}};
+ \draw[arrow, green!75!black] (3-3)|-(NH4Cl.west);
+ \draw[arrow, orange] (4-2)|-($($(CO2.south)!.5!(CO2.south east)$)+(0,-0.5)$)--($(CO2.south)!.5!(CO2.south east)$);
+ \draw[arrow, orange] ($(NaHCO3.east)!(H2O.south)!(Na2CO3.west)$)--(H2O.south);
+ \coordinate (5-1) at ($(CaOH2.east)!0.25!(CaCl2.west)$);
+ \coordinate (5-2) at ($(CaOH2.east)!0.5!(CaCl2.west)$);
+ \coordinate (5-3) at ($(CaOH2.east)!0.75!(CaCl2.west)$);
+ \draw[arrow, dashed] (NH4Cl.east)-|(5-1);
+ \draw[arrow, dashed] (5-2)|-(H2O.east);
+ \draw[arrow, dashed] (5-3)|-($(NH3.south)+(0,-0.5)$)--(NH3.south);
+\end{tikzpicture}
+\begin{enumerate}
+ \item \hl{炭酸カルシウム}の\hl{熱分解}\\
+ \hce{CaCO3 → CaO ＋ CO2}
+ \item \hl{酸化カルシウム}と\hl{水}\\
+ \hce{CaO ＋ H2O → Ca(OH)2}
+ \item \hl{塩化ナトリウム水溶液}に\hl{アンモニア}を溶解させてから、\hl{二酸化炭素}を溶解\\
+ \hce{NaCl ＋ NH3 ＋ CO2 ＋ H2O → NH4Cl ＋ NaHCO3 ↓}
+ \item \hl{炭酸水素ナトリウム}の\hl{熱分解}\\
+ \hce{2 NaHCO3 → Na2CO3 ＋ H2O ＋ CO2 ↑}
+ \item \hl{水酸化カルシウム}と\hl{塩化アンモニウム}
+ \hce{2 NH4Cl ＋ Ca(OH)2 → CaCl2 ＋ 2 NH3 ↑ ＋ 2 H2O}
+\end{enumerate}
+\end{itembox}
+
  \subsubsection{反応}
  \begin{itemize}
   \item \ce{Na2CO3}
@@ -962,9 +1016,28 @@
  \section{2族元素}
  \subsection{単体}
  \subsubsection{性質}
- 
+ \begin{tabular}{|c||c|c|c|c|c|}\hline
+ 化学式&\hl{\ce{Be}}&\hl{\ce{Mg}}&\hl{\ce{Ca}}&\hl{\ce{Sr}}&\hl{\ce{Ba}}\\ \hline
+ 融点&$1282^{\circ}$C&$649^{\circ}$C&$839^{\circ}$C&$769^{\circ}$C&$729^{\circ}$C\\ \hline
+ 密度(g/cm$^3$)&1.85&1.74&1.55&2.54&3.59\\ \hline
+ \hl{還元}力&\multicolumn{5}{|c|}{小 \quad\tikz \draw[line width=0.5pt] (6,0.1)--(0,0)--(6,-0.1);\quad 大}\\ \hline
+ 水との反応&\hl{反応しない}&\hl{熱水}と反応&\hl{冷水}と反応&\hl{冷水}と反応&\hl{冷水}と反応\\ \hline
+ \ce{M(OH)2}の水溶性&\multicolumn{2}{|c|}{\hl{難溶}性（\hl{弱塩基}性）}&\multicolumn{3}{|c|}{\hl{可溶}性（\hl{強塩基}性）}\\ \hline
+ 難溶性の塩&\multicolumn{2}{|c|}{\hl{\ce{MCO3}}}&\multicolumn{3}{|c|}{\hl{\ce{MCO3,MSO4}}}\\ \hline
+ 炎色反応&\hl{示さない}&\hl{示さない}&\hl{橙赤}&\hl{紅}&\hl{黄緑}\\ \hline
+ 用途&X線通過窓&フラッシュ&精錬の還元剤&発煙筒&ゲッター\\ \hline
+ \end{tabular}
  \subsubsection{製法}
  塩化物の\hl{溶融塩電解} \K
+ \subsubsection{反応}
+ \begin{itemize}
+  \item マグネシウムの燃焼\\
+  \hce{2Mg + O2 -> 2 MgO}
+  \item マグネシウムと二酸化炭素\\
+  \hce{2Mg + CO2 -> 2 MgO + C}
+  \item カルシウムと水\\
+  \hce{Ca + 2H2O -> Ca(OH)2 + H2 ^}
+ \end{itemize}
  \onecolumn
  \part{APPENDIX}
   \section{気体の乾燥剤}
