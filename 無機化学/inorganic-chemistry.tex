@@ -1,4 +1,4 @@
-\documentclass[dvipdfmx,a4paper]{jlreq}
+\documentclass[dvipdfmx,a4paper]{jsarticle}
 \usepackage[deluxe]{otf}
 \usepackage[top=20truemm,bottom=20truemm,left=15truemm,right=15truemm]{geometry}
 \usepackage{multirow}
@@ -439,7 +439,6 @@
   \columnbreak
   \chemfig{H(-[:190,0.7,,,black,line width=2pt,dash pattern=on 1pt off 2pt]O(-[::-40,0.7]H)-[::40,0.7]H)-[:10]O(-[:90,0.9,,,black,line width=2pt,dash pattern=on 1pt off 2pt]H-[:120,0.7]O-[:200,0.7]H)(-[:-10,,,,black,line width=2pt,dash pattern=on 1pt off 2pt]H-[:40,0.7]O-[:-40,0.7]H)-[:-60,0.9]H-[:-60,0.7,,,black,line width=2pt,dash pattern=on 1pt off 2pt]O(-[,0.7]H)-[:-80,0.7]H}
   \end{multicols}
-\twocolumn
  \section{硫黄}
   \subsection{硫黄}
    \subsubsection{性質}
@@ -483,7 +482,6 @@
     \item 酸化鉄（\ajRoman{2}）と希硫酸\\
     \hce{FeS + H2SO4 -> FeSO4 + H2S ^}
    \end{itemize}
-   \newpage
    \subsubsection{反応}
    \begin{itemize}
     \item 硫化水素とヨウ素\\
@@ -526,6 +524,7 @@
    \hce{2KMnO4 + 5SO2 + 2H2O -> 2MnSO4 + 2H2SO4 + K2SO4}
   \end{itemize}
   \newpage
+  \twocolumn
   \subsection{硫酸}
   \subsubsection{性質}
   \begin{itemize}
@@ -837,6 +836,9 @@
  \end{tabular}
  \subsection{一酸化炭素}
  化学式：\hl{\ce{CO}}
+ 電子式：
+ 
+ 
   \subsubsection{性質}
   \begin{itemize}
    \item \hl{無}色\hl{無}臭で\hl{有毒}な気体
@@ -869,11 +871,63 @@
    \right.$
   \end{itemize}
  \subsection{二酸化炭素}
- 
+ \subsubsection{性質}
+ \begin{itemize}
+  \item \hl{無}色\hl{無}臭で\hl{昇華}性（固体は\hl{ドライアイス}）
+  \item 大気の$0.04\%$を占める
+  \item 水に\hl{少し溶ける}
+  \item \hl{弱酸}性\\
+  $\left(
+   \begin{tabular}{ll}
+    \hl{\ce{CO2 + H2O <=> H+ + HCO3-}}&$K_{1}=4.3\times10^{-7}$ mol/L\\
+   \end{tabular}
+   \right)$
+ \end{itemize}
+ \subsubsection{製法}
+ \begin{itemize}
+  \item \hl{炭酸カルシウム}を強熱 \K\\
+  \hce{CaCO2 -> CaO + CO2}
+  \item \hl{希塩酸}と\hl{石灰石}\\
+  \hce{CaCO3 + 2HCl -> CaCl2 + H2O + CO2}
+  \item \hl{炭酸水素ナトリウム}の熱分解\\
+  \hce{2NaHCO3 -> Na2CO3 + CO2 + H2O}
+ \end{itemize}
+ \subsubsection{反応}
+ \begin{itemize}
+  \item \hce{CO2 + 2NaOH -> Na2CO3+ H2O}
+  \item \hl{石灰水}に通じると\hl{白濁}しさらに通じると\hl{白濁が消える}\\
+  \hce{Ca(OH)2 + CO2 <=> CaCO3 v + H2O}\\
+  \hce{CaCO3 + CO2 + H2O <=> Ca(HCO3)2}
+ \end{itemize}
  \section{ケイ素}
- 
+ \subsection{ケイ素}
+ \subsubsection{性質}
+ \begin{itemize}
+  \item \hl{灰}色で\hl{光沢}がある\hl{共有結合}結晶
+  \item \hl{硬いがもろい}
+  \item \hl{半導体}に使用（高純度のケイ素）\footnote{$6N\cdots$太陽電池用、$11N\cdots$集積回路用}\\
+  高温にしたり微小の他電子を添加すると電気伝導性が\hl{上昇}（金属は高温で電気伝導性が\hl{降下}）
+ \end{itemize}
+ \subsubsection{製法}
+ \begin{itemize}
+  \item \hl{ケイ砂}と\hl{一酸化炭素}を混ぜて強熱 \K\\
+  \hce{SiO2 + 2C -> Si + 2CO}
+  \item \hl{ケイ砂}と\hl{マグネシウム}粉末を混ぜて加熱\\
+  \hce{SiO2 + 2Mg -> Si + 2MgO}
+ \end{itemize}
  \subsection{二酸化ケイ素}
- 
+ 化学式：\hl{\ce{SiO2}}
+ \subsubsection{性質}
+ \begin{itemize}
+  \item \hl{無}色\hl{透明}の\hl{共有結合}結晶
+  \item \hl{硬い}
+  \item 地球の近く中に多く存在（ケイ砂、石英、水晶）
+  \item \hl{酸性}酸化物
+ \end{itemize}
+ \subsubsection{反応}
+ \begin{itemize}
+  \item シリカゲルの製法\\
+ \end{itemize}
 \newpage
 \part{典型金属}
  \section{アルカリ金属}
@@ -996,7 +1050,7 @@
  \node[box] (H2O) at ([yshift=-15mm]2){\hl{\ce{H2O}}};
  \draw[arrow, red] (1)--($(CO2.north)!(1)!(CO2.north east)$);
  \draw[arrow, blue] (2)--(H2O.north);
- \node[box, right, fill=green!10!white] (NaCl) at(0,-3) {\ce{NaCl}};
+ \node[box, right, fill=green!10!white] (NaCl) at(0,-3) {\hl{\ce{NaCl}}};
  \node[box, right] (NaHCO3) at(2.5,-3){\hl{\ce{NaHCO3}}};
  \node[box, right] (Na2CO3) at(6,-3){\hl{\ce{Na2CO3}}};
  \draw[arrow, green!75!black] (NaCl.east)--(NaHCO3.west);
@@ -1047,6 +1101,74 @@
   \end{tabular}
   \right.$
  \end{itemize}
+ \subsection{酸化カルシウム（生石灰）}
+ 化学式：\hl{\ce{CaO}}
+ \subsubsection{性質}
+ \begin{itemize}
+  \item \hl{白}色
+  \item \hl{水}との親和性が\hl{非常に高い}（\hl{乾燥剤}）
+  \item \hl{塩基性}酸化物
+  \item 水との反応熱が\hl{非常に大きい}（\hl{加熱剤}）
+ \end{itemize}
+ \subsubsection{製法}
+ \hl{炭酸カルシウム}の\hl{熱分解}
+ \subsubsection{反応}
+ \begin{itemize}
+  \item コークスを混ぜて強熱すると、\hl{炭化カルシウム}（\hl{カーバイド}）が生成\\
+  \hce{CaO + 3C -> CaC2 + CO ^}\\
+  \hl{水}と反応して\hl{アセチレン}が生成\\
+  \hce{CaC2 + 2H2O -> CaH2 ^ + Ca(OH2)2}
+ \end{itemize}
+ \subsection{水酸化カルシウム}
+ 化学式：\hl{\ce{CaOH}}
+ \subsubsection{性質}
+ \begin{itemize}
+  \item \hl{白}色
+  \item 水に\hl{少し溶ける}固体
+  \item \hl{強塩基}
+  $\left\{
+  \begin{tabular}{ll}
+  \hl{\ce{Ca(OH)2 <=> Ca(OH)+ + OH-}}&$K_{1}=5.0\times10^{-2}$\\
+  \end{tabular}
+  \right.$
+  \item 水溶液は\hl{石灰水}
+ \end{itemize}
+ \subsubsection{製法}
+ \hl{酸化カルシウム}と\hl{水} \K\\
+ 
+ \subsubsection{反応}
+ \begin{itemize}
+  \item 塩素と反応して、\hl{さらし粉}が生成\\
+  
+  \item $580^{\circ}$C以上で\hl{熱分解}\\
+  
+ \end{itemize}
+ \subsection{炭酸カルシウム（石灰石）}
+ 化学式：\hl{\ce{CaCO3}}
+ \subsubsection{性質}
+ \begin{itemize}
+  \item \hl{白}色で、水に\hl{溶けにくい}
+  \item \hl{鍾乳洞}の形成
+ \end{itemize}
+ \subsubsection{反応}
+ \begin{itemize}
+  \item $800^{\circ}$C以上で\hl{熱分解}\\
+  
+  \item \hl{二酸化炭素}を多く含む水に\hl{溶解}\\
+  
+ \end{itemize}
+ \subsection{塩化マグネシウム・塩化カルシウム}
+ 化学式：\hl{\ce{MgCl2}}・\hl{\ce{CaCl2}}
+ \subsubsection{性質}
+ 
+ \subsubsection{製法}
+ \begin{itemize}
+  \item 海水から得た\hl{にがり}を濃縮 \K
+  \item \hl{アンモニアソーダ法}（\hl{ソルベー法} \K
+ \end{itemize}
+ \subsection{硫酸カルシウム・硫酸バリウム}
+ 化学式：\hl{\ce{CaSO4}}・\hl{\ce{BaSO4}}
+ \subsubsection{性質}
  \section{2族元素}
  \subsection{単体}
  \subsubsection{性質}
@@ -1072,6 +1194,7 @@
   \item カルシウムと水\\
   \hce{Ca + 2H2O -> Ca(OH)2 + H2 ^}
  \end{itemize}
+ 
  \onecolumn
  \part{APPENDIX}
   \section{気体の乾燥剤}
