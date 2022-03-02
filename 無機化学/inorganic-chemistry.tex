@@ -105,7 +105,7 @@
   \item \hl{イオン化傾向}が\hl{\ce{H2}より大きい}金属と希薄強酸\\
   \R \;\ce{Fe + 2HCl -> FeCl2 + H2 ^}\\
   \R \;\ce{Zn + 2HCl -> ZnCl2 + H2 ^}
-  \item 水酸化ナトリウムと水\\
+  \item 水素化ナトリウムと水\\
   \hce{NaH + H2O -> NaOH + H2}
  \end{itemize}
  \subsection{反応}
@@ -201,9 +201,9 @@
    \begin{itemize}
     \item フッ化水素ナトリウム\ce{KHF2}のフッ化水素\ce{HF}溶液の電気分解 \K\\
     \ce{KHF2 -> KF + HF}
-    \item \hl{塩化ナトリウム}の電気分解 \stamp{teal}{塩素} \K\\
+    \item \hl{塩化ナトリウム水溶液}の電気分解 \stamp{teal}{塩素} \K\\
     \hce{2NaCl + 2H2O -> Cl2 + H2 + 2NaOH}
-    \item \hl{酸化マンガン（\ajRoman{4}）}に\hl{濃硫酸}を加えて加熱 \stamp{teal}{塩素}\\
+    \item \hl{酸化マンガン（\ajRoman{4}）}に\hl{濃塩酸}を加えて加熱 \stamp{teal}{塩素}\\
     \hce{MnO2 + 4HCl ->[][\Delta] MnCl2 + Cl2 ^ + 2H2O}
     \item \hl{高度さらし粉}と\hl{塩酸} \stamp{teal}{塩素}\\
     \hce{Ca(ClO)2*2H2O + 4HCl -> CaCl2 + 2Cl2 ^ + 4H2O}
@@ -1094,9 +1094,9 @@ $\left.
  \node[box, right] (CaO) at(3,0){\hl{\ce{CaO}}};
  \node[box, right] (CaOH2) at(6,0){\hl{\ce{Ca(OH)2}}};
  \node[box, right, fill=blue!10!white] (CaCl2) at(11,0){\hl{\ce{CaCl2}}};
- \draw[arrow, red] (CaCO3.east)--(CaO.west);
- \draw[arrow, blue] (CaO.east)--(CaOH2.west);
- \draw[arrow, dashed] (CaOH2.east)--(CaCl2.west);
+ \draw[arrow, red] (CaCO3.east)--node[auto=left] {1}(CaO.west);
+ \draw[arrow, blue] (CaO.east)--node[auto=left] {2}(CaOH2.west);
+ \draw[arrow] (CaOH2.east)-- node[auto=left] {5}(CaCl2.west);
  
  \coordinate (1) at ($(CaCO3.east)!0.5!(CaO.west)$);
  \node[box] (CO2) at ([xshift=-5mm,yshift=-15mm]1){\hl{\ce{CO2}}};
@@ -1108,8 +1108,8 @@ $\left.
  \node[box, right, fill=green!10!white] (NaCl) at(0,-3) {\hl{\ce{NaCl}}};
  \node[box, right] (NaHCO3) at(2.5,-3){\hl{\ce{NaHCO3}}};
  \node[box, right] (Na2CO3) at(6,-3){\hl{\ce{Na2CO3}}};
- \draw[arrow, green!75!black] (NaCl.east)--(NaHCO3.west);
- \draw[arrow, orange] (NaHCO3.east)--(Na2CO3.west);
+ \draw[arrow, green!75!black] (NaCl.east)--node[auto=right] {3}(NaHCO3.west);
+ \draw[arrow, orange] (NaHCO3.east)--node[auto=right] {4}(Na2CO3.west);
  
  \coordinate (3-1) at ($(NaCl.east)!0.25!(NaHCO3.west)$);
  \coordinate (3-3) at ($(NaCl.east)!0.75!(NaHCO3.west)$);
@@ -1124,9 +1124,9 @@ $\left.
  \coordinate (5-1) at ($(CaOH2.east)!0.25!(CaCl2.west)$);
  \coordinate (5-2) at ($(CaOH2.east)!0.5!(CaCl2.west)$);
  \coordinate (5-3) at ($(CaOH2.east)!0.75!(CaCl2.west)$);
- \draw[arrow, dashed] (NH4Cl.east)-|(5-1);
- \draw[arrow, dashed] (5-2)|-(H2O.east);
- \draw[arrow, dashed] (5-3)|-($(NH3.south)+(0,-0.5)$)--(NH3.south);
+ \draw[arrow] (NH4Cl.east)-|(5-1);
+ \draw[arrow] (5-2)|-(H2O.east);
+ \draw[arrow] (5-3)|-($(NH3.south)+(0,-0.5)$)--(NH3.south);
 \end{tikzpicture}
 \begin{enumerate}
  \item \hl{炭酸カルシウム}の\hl{熱分解}\\
