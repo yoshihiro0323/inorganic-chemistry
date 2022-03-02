@@ -1,4 +1,4 @@
-\documentclass[dvipdfmx,a4paper]{jsarticle}
+\documentclass[dvipdfmx,a4paper,13pt]{jsarticle}
 \usepackage[deluxe]{otf}
 \usepackage[top=20truemm,bottom=20truemm,left=15truemm,right=15truemm]{geometry}
 \usepackage{multirow}
@@ -15,6 +15,7 @@
 \usepackage[dvipdfmx]{hyperref}
 \usepackage{ascmac}
 \usepackage{multicol}
+\usepackage{amssymb}
 \usetikzlibrary{calc}
 
 \makeatletter
@@ -30,7 +31,7 @@
           line width=.5pt, inner sep=2pt, outer sep=0pt
           ] (num){\addtocounter{answer}{1}\arabic{answer}};
    \node [right, inner sep=1pt, outer sep=0pt] (text) at (num.east){#1};
-   \draw [line width=.5pt, outer sep=0pt] (num.south)--($(text.base east)-(num.base west)+(num.south)+(-4pt,0)$);
+   \draw [line width=.5pt, outer sep=0pt] (num.south)--($(text.base east)-(num.base west)+(num.south)+(-10pt,0)$);
   \end{tikzpicture}%
 }
 \newcounter{answer}
@@ -380,7 +381,7 @@
    \begin{itembox}[l]{オゾンにおける酸素原子の運動}
    \begin{center}
    \chemfig{\charge{[circle]30=\.,150=\:,270=\:}{O}-[:30,0.6,,,opacity = 0]\charge{[circle]90=\:,210=\.,330=\:}{O}=[:-30,0.6,,,opacity = 0]\charge{[circle]30=\:,150=\:,270=\:}{O}}
-   \ce{<=>T[\hl{振動}]} 
+   \ce{<=>T[\hl{共鳴}]} 
    \chemfig{\charge{[circle]30=\:,150=\:,270=\:}{O}-[:30,0.6,,,opacity = 0]\charge{[circle]90=\:,210=\:,330=\.}{O}=[:-30,0.6,,,opacity = 0]\charge{[circle]30=\:,150=\.,270=\:}{O}}
    \end{center}
    \hfill $\Rightarrow$\hl{極性}
@@ -785,8 +786,8 @@
   \end{tabular}
   \subsubsection{製法}
   \begin{itemize}
-   \item リン鉱石にケイ砂とコークスを混ぜて強熱し、蒸気を水で冷却 \stamp{Goldenrod}{黄リン} \K\\
-   
+   \item リン鉱石にケイ砂とコークスを混ぜて強熱し、蒸気を水で冷却 \stamp{yellow!80!black}{黄リン} \K\\
+   \hce{2Ca3(PO4)2 + 6SiO2 + 10 C -> 6CaSiO3 + 10CO + P4}
    \item 空気を遮断して黄リンを$250^{\circ}$Cで加熱 \stamp{red}{赤リン}
    \item 空気を遮断して黄リンを$200^{\circ}$C、$1.2\times10^9$Paで加熱 \stamp{black}{黒リン}
   \end{itemize}
@@ -802,9 +803,10 @@
   \end{itemize}
   \subsubsection{製法}
   \hl{リンの燃焼}\\
-  
+  \ce{P4 + 5O2 -> P4O10}
   \subsubsection{反応}
   水を加えて加熱\\
+  \ce{P4O10 + 6H2O -> 4H3PO4}
   \subsection{リン酸}
   化学式：\hl{\ce{H3PO4}}
   \subsubsection{性質}
@@ -816,29 +818,59 @@
    \right)$
   \subsubsection{反応}
   \begin{itemize}
+   \item リン酸と水酸化カルシウムの完全中和\\
+   \hce{2H3PO4 + 3Ca(OH)2 -> Ca3(PO4)2 + 6H2O}
    \item リン酸カルシウムとリン酸が反応して重過リン酸石灰が生成\\
-   
+   \hce{Ca3(PO4)2 + 4H3PO4 -> 3Ca(H2PO4)2}
    \item リン酸カルシウムと硫酸が反応して過リン酸石灰が生成\\
-   
+   \hce{Ca3(PO4)2 + 2H2SO4 -> Ca(H2PO4)2 + 2CaSO4}
   \end{itemize}
 \end{multicols*}
  \section{炭素}
  \subsection{炭素}
  \subsubsection{性質}
- 炭素の同\hl{素}体は、\hl{ダイアモンド}、\hl{黒鉛}（\hl{グラファイト}）etc...\\
+ 炭素の同\hl{素}体
+ \begin{itemize}
+ \item \hl{ダイアモンド}
+ \item \hl{黒鉛}（\hl{グラファイト}）
+ \item 無定形炭素\\
+ \stamp{red}{用途} 顔料・脱臭剤（活性炭）\\
+ 黒色で、黒鉛の美結晶が不規則に集合。電気伝導性を示す。
+ \item \hl{フラーレン}\\
+ \stamp{red}{用途} 医療・材料分野での応用\\
+ 黒褐色で、60個の炭素原子がサッカーボール状につながった分子結晶。電気伝導性を示さない。
+ \item グラフェン\\
+ \stamp{red}{用途} 半導体材料への応用\\
+ 黒鉛の平面性六角形状の層のうち一層だけを取り出したもの。電気伝導性を示す。
+ \item カーボンナノチューブ\\
+ \stamp{red}{用途} 水素吸蔵・電池電極への応用\\
+ グラフェンを円筒状に巻いたもの。電気伝導性を示す。
+ \end{itemize}
  \begin{tabular}{|c||c|c|}\hline
  名称&\hl{ダイアモンド}&\hl{黒鉛}\\ \hline
  特徴&\hl{無}色\hl{透明}で屈折率が大きい固体&\hl{黒}色で\hl{光沢}がある固体\\ \hline
  密度&3.5g/cm$^3$&2.3g/cm$^3$\\ \hline
- 構造&\hl{正四面体}方向の\hl{共有結合}結晶&\hl{ズレた層状}構造\\ \hline
+ 構造&\hl{正四面体}方向の\hl{共有結合}結晶&\hl{ズレた層状}構造（\hl{ファンデルワールス力}）\\ \hline
+ 硬さ&\hl{非常に硬い}&\hl{軟らかい}\\ \hline
+ 沸点&\hl{高い}&\hl{高い}\\ \hline
  電気伝導性&\hl{なし}&\hl{あり}\\ \hline
  用途&宝石・カッターの刃・研磨剤&鉛筆・電極\\ \hline
  \end{tabular}
  \subsection{一酸化炭素}
- 化学式：\hl{\ce{CO}}
- 電子式：
- 
- 
+ 化学式：\hl{\ce{CO}}\\
+\begin{tabular}{|rcc|}\hline
+電子式&
+\quad\chemfig{\charge{[circle]0=\:,180=\:}{C}-[,0.6,,,opacity = 0]\charge{[circle]90=\:,180=\:,270=\:}{O}}\ce{<=>T[\hl{共鳴}]}\chemfig{\charge{[circle]0=\:,0=\.,180=\:,135[circle,anchor=180+\chargeangle]={\tiny$\ominus$}}{C}-[,0.6,,,opacity = 0]\charge{[circle]0=\:,180=\:,180=\.,45[circle,anchor=180+\chargeangle]={\tiny$\oplus$}}{O}} &
+\chemfig{\charge{[circle]0=\:,0=\.,180=\:}{N}-[,0.6,,,opacity = 0]\charge{[circle]0=\:,180=\.,180=\:}{N}}\\
+原子間距離&$0.113$nm&$0.110$nm\\ \hline
+\end{tabular}\\
+$\left.
+\begin{tabular}{l}
+\ce{C,O}電子の持つ\hl{電荷}による効果\\
+\ce{C#O}間の\hl{電気陰性度}の差による効果
+\end{tabular}
+\right\}$\ce{CO}の極性は\hl{小さい}
+
   \subsubsection{性質}
   \begin{itemize}
    \item \hl{無}色\hl{無}臭で\hl{有毒}な気体
@@ -923,11 +955,34 @@
   \item \hl{硬い}
   \item 地球の近く中に多く存在（ケイ砂、石英、水晶）
   \item \hl{酸性}酸化物
+  \item \hl{シリカゲル}（\hl{乾燥剤}・吸着剤）の生成に用いられる\\
+  多孔質、適度な数の\hl{ヒドロキシ基}
  \end{itemize}
  \subsubsection{反応}
  \begin{itemize}
-  \item シリカゲルの製法\\
+  \item \hl{フッ化水素}と反応\\
+  \hce{SiO2 + 4HF -> SiF4 ^ + 2H2O}
+  \item \hl{フッ化水素酸}と反応\\
+  \hce{SiO2 + 6HF -> H2SiF6 ^ + 2H2O}
+  \item \hl{水酸化ナトリウム}や\hl{炭酸ナトリウム}がガラスを侵す反応（\hl{水ガラス}の生成）\\
+  \hce{SiO2 + 2NaOH -> Na2SiO3 + H2O}\\
+  \hce{SiO2 + Na2CO3 -> Na2SiO3 + CO2}
+  \item \hl{水ガラス}と\hl{塩酸}から\hl{ケイ酸}の白色ゲル状沈澱が生じる反応\\
+  \hce{NaSiO3 + 2HCl -> H2SiO3 v + 2NaCl}
+  \item \hl{ケイ酸}を加熱してシリカゲルを得る反応\\
+  \hce{H2SiO3 ->[][\Delta] SiO2*$n$H2O + $(1-n)$H2O} $(0<n<1)$
  \end{itemize}
+ \begin{enumerate}
+  \item 二酸化ケイ素（シリカ）\ce{SiO2}\\
+  \chemfig{-O-Si(-[2,0.6]O)(-[-2,0.6]O)}
+  \item ケイ酸ナトリウム \ce{Na2SiO3}\\
+  
+  \item ケイ酸 \ce{SiO2*$n$H2O} $(0 \leqq n \leqq 1)$\\
+  
+  \item シリカゲル \ce{SiO2*$n$H2O} $(n \ll 1)$\\
+  
+ \end{enumerate}
+ 
 \newpage
 \part{典型金属}
  \section{アルカリ金属}
@@ -1085,6 +1140,7 @@
  \item \hl{水酸化カルシウム}と\hl{塩化アンモニウム}\\
  \hce{2NH4Cl + Ca(OH)2 -> CaCl2 + 2NH3 ^ + 2H2O}
 \end{enumerate}
+\hce{2NaCl + CaCO3 -> CaCl2 + Na2CO3}
 \end{itembox}
 
  \subsubsection{反応}
@@ -1101,75 +1157,9 @@
   \end{tabular}
   \right.$
  \end{itemize}
- \subsection{酸化カルシウム（生石灰）}
- 化学式：\hl{\ce{CaO}}
- \subsubsection{性質}
- \begin{itemize}
-  \item \hl{白}色
-  \item \hl{水}との親和性が\hl{非常に高い}（\hl{乾燥剤}）
-  \item \hl{塩基性}酸化物
-  \item 水との反応熱が\hl{非常に大きい}（\hl{加熱剤}）
- \end{itemize}
- \subsubsection{製法}
- \hl{炭酸カルシウム}の\hl{熱分解}
- \subsubsection{反応}
- \begin{itemize}
-  \item コークスを混ぜて強熱すると、\hl{炭化カルシウム}（\hl{カーバイド}）が生成\\
-  \hce{CaO + 3C -> CaC2 + CO ^}\\
-  \hl{水}と反応して\hl{アセチレン}が生成\\
-  \hce{CaC2 + 2H2O -> CaH2 ^ + Ca(OH2)2}
- \end{itemize}
- \subsection{水酸化カルシウム}
- 化学式：\hl{\ce{CaOH}}
- \subsubsection{性質}
- \begin{itemize}
-  \item \hl{白}色
-  \item 水に\hl{少し溶ける}固体
-  \item \hl{強塩基}
-  $\left\{
-  \begin{tabular}{ll}
-  \hl{\ce{Ca(OH)2 <=> Ca(OH)+ + OH-}}&$K_{1}=5.0\times10^{-2}$\\
-  \end{tabular}
-  \right.$
-  \item 水溶液は\hl{石灰水}
- \end{itemize}
- \subsubsection{製法}
- \hl{酸化カルシウム}と\hl{水} \K\\
  
- \subsubsection{反応}
- \begin{itemize}
-  \item 塩素と反応して、\hl{さらし粉}が生成\\
-  
-  \item $580^{\circ}$C以上で\hl{熱分解}\\
-  
- \end{itemize}
- \subsection{炭酸カルシウム（石灰石）}
- 化学式：\hl{\ce{CaCO3}}
- \subsubsection{性質}
- \begin{itemize}
-  \item \hl{白}色で、水に\hl{溶けにくい}
-  \item \hl{鍾乳洞}の形成
- \end{itemize}
- \subsubsection{反応}
- \begin{itemize}
-  \item $800^{\circ}$C以上で\hl{熱分解}\\
-  
-  \item \hl{二酸化炭素}を多く含む水に\hl{溶解}\\
-  
- \end{itemize}
- \subsection{塩化マグネシウム・塩化カルシウム}
- 化学式：\hl{\ce{MgCl2}}・\hl{\ce{CaCl2}}
- \subsubsection{性質}
- 
- \subsubsection{製法}
- \begin{itemize}
-  \item 海水から得た\hl{にがり}を濃縮 \K
-  \item \hl{アンモニアソーダ法}（\hl{ソルベー法} \K
- \end{itemize}
- \subsection{硫酸カルシウム・硫酸バリウム}
- 化学式：\hl{\ce{CaSO4}}・\hl{\ce{BaSO4}}
- \subsubsection{性質}
  \section{2族元素}
+ \hl{\ce{Be}},\hl{\ce{Mg}},\hl{アルカリ土類金属}
  \subsection{単体}
  \subsubsection{性質}
  \begin{tabular}{|c||c|c|c|c|c|}\hline
@@ -1195,7 +1185,93 @@
   \hce{Ca + 2H2O -> Ca(OH)2 + H2 ^}
  \end{itemize}
  
+ \subsection{酸化カルシウム（生石灰）}
+ 化学式：\hl{\ce{CaO}}
+ \subsubsection{性質}
+ \begin{itemize}
+  \item \hl{白}色
+  \item \hl{水}との親和性が\hl{非常に高い}（\hl{乾燥剤}）
+  \item \hl{塩基性}酸化物
+  \item 水との反応熱が\hl{非常に大きい}（\hl{加熱剤}）
+ \end{itemize}
+ \subsubsection{製法}
+ \hl{炭酸カルシウム}の\hl{熱分解}\\
+ \hce{CaCO3 -> CaO + CO2}
+ \subsubsection{反応}
+ \begin{itemize}
+  \item コークスを混ぜて強熱すると、\hl{炭化カルシウム}（\hl{カーバイド}）が生成\\
+  \hce{CaO + 3C -> CaC2 + CO ^}\\
+  \hl{水}と反応して\hl{アセチレン}が生成\\
+  \hce{CaC2 + 2H2O -> CaH2 ^ + Ca(OH2)2}
+ \end{itemize}
+ \subsection{水酸化カルシウム（消石灰）}
+ 化学式：\hl{\ce{Ca(OH)2}}
+ \subsubsection{性質}
+ \begin{itemize}
+  \item \hl{白}色
+  \item 水に\hl{少し溶ける}固体
+  \item \hl{強塩基}
+  $\left(
+  \begin{tabular}{ll}
+  \hl{\ce{Ca(OH)2 <=> Ca(OH)+ + OH-}}&$K_{1}=5.0\times10^{-2}$\\
+  \end{tabular}
+  \right)$
+  \item 水溶液は\hl{石灰水}
+ \end{itemize}
+ \subsubsection{製法}
+ \hl{酸化カルシウム}と\hl{水} \K\\
+ \hce{CaO + H2O -> Ca(OH)2}
+ \subsubsection{反応}
+ \begin{itemize}
+  \item 塩素と反応して、\hl{さらし粉}が生成\\
+  \hce{Ca(OH)2 + Cl2 -> CaCl(ClO)*H2O}
+  \item $580^{\circ}$C以上で\hl{熱分解}\\
+  \hce{Ca(OH)2 -> CaO + H2O}
+  \item 二酸化炭素との反応\\
+  \hce{Ca(OH)2 + CO2 -> CaCO3 + H2O}
+  \item 塩化アンモニウムとの反応\\
+  \hce{2NH4Cl + Ca(OH)2 -> CaCl2 + 2NH3 ^ + 2H2O}
+ \end{itemize}
+ \subsection{炭酸カルシウム（石灰石）}
+ 化学式：\hl{\ce{CaCO3}}
+ \subsubsection{性質}
+ \begin{itemize}
+  \item \hl{白}色で、水に\hl{溶けにくい}
+  \item \hl{鍾乳洞}の形成
+ \end{itemize}
+ \subsubsection{反応}
+ \begin{itemize}
+  \item $800^{\circ}$C以上で\hl{熱分解}\\
+  \hce{CaCO3 -> CaO + CO2}
+  \item \hl{二酸化炭素}を多く含む水に\hl{溶解}\\
+  \hce{CaCO3 + CO2 + H2O <=> Ca(HCO3)2}
+ \end{itemize}
+ \subsection{塩化マグネシウム・塩化カルシウム}
+ 化学式：\hl{\ce{MgCl2}}・\hl{\ce{CaCl2}}
+ \subsubsection{性質}
+  \hl{潮解}性があり、水に\hl{よく溶ける}（水との親和性が\hl{非常に高い}）\\
+  \hl{乾燥}剤 \stamp{teal}{塩化カルシウム}、\hl{融雪}剤
+ \subsubsection{製法}
+ \begin{itemize}
+  \item 海水から得た\hl{にがり}を濃縮 \stamp{teal}{塩化マグネシウム} \K
+  \item \hl{アンモニアソーダ法}（\hl{ソルベー法}）stamp{teal}{塩化カルシウム} \K
+ \end{itemize}
+ \subsection{硫酸カルシウム}
+ 化学式：\hl{\ce{CaSO4}}
+ \subsubsection{性質}
+  \hl{セッコウ}を約$150^{\circ}$Cで加熱すると、\hl{焼きセッコウ}が生成\\
+  \hl{水}を加えると、\hl{発熱}・\hl{膨張}・\hl{硬化}して\hl{セッコウ}に戻る\\
+  \hce{CaSO4*2H2O <=>T[$\Delta$][加熱] CaSO4*$\dfrac{1}{2}$H2O + $\dfrac{3}{2}$H2O}
+  \stamp{red}{用途} 医療用ギプス・石膏像・建材
+ \subsubsection{硫酸バリウム}
+ 化学式：\hl{\ce{BaSO4}}
+ \subsubsection{性質}
+ \begin{itemize}
+  \item \hl{白}色で、水に\hl{ほとんど溶けない}固体
+  \item 反応性が\hl{低}く、X線を遮蔽
+ \end{itemize}
  \onecolumn
+ \setcounter{section}{0}
  \part{APPENDIX}
   \section{気体の乾燥剤}
   固体の乾燥剤は\hl{Ｕ字管}につめて、液体の乾燥剤は\hl{洗気瓶}に入れて使用。\\
@@ -1208,4 +1284,21 @@
   \multirow{2}{*}{塩基性}&\hl{酸化カルシウム}&\hl{\ce{CaO}}&\multirow{2}{*}{中性・塩基性}&酸性の気体\\ \cline{2-3}
   &\hl{ソーダ石灰}&\hl{\ce{CaO}と\ce{NaOH}}&&\hl{\ce{Cl2}},\hl{\ce{HCl}},\hl{\ce{H2S}},\hl{\ce{SO2}},\hl{\ce{CO2}},\hl{\ce{NO2}}\\ \hline
   \end{tabular}
+  \section{水の硬度}
+  水の中の重荷\ce{Ca^2+}と\ce{Mg^2+}を\ce{CaCO3}として換算した時の濃度[mg/L]\\
+  硬水に含まれる陰イオンが
+  $\left\{
+  \begin{tabular}{l}
+  煮沸する\hl{炭酸塩}が沈澱して軟化可能（一時硬水）\\
+  $\left(
+  \begin{tabular}{l}
+   \R 炭酸水素カルシウム水溶液\\
+   \hce{Ca(HCO3)2 -> CaCO3 v + H2O + CO2}\\
+   \R 炭酸水素マグネシウム水溶液\\
+   \hce{Mg(HCO3)2 -> MgCO3 v + H2O + CO2}
+  \end{tabular}
+  \right)$\\
+  煮沸しても軟化不可能（永久硬水）
+  \end{tabular}
+  \right.$
 \end{document}
