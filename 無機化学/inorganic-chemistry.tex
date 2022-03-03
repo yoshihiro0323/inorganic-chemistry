@@ -35,8 +35,8 @@
   \end{tikzpicture}%
 }
 \newcounter{answer}
-\newcommand{\hl}[1]{\answer{\textcolor{red}{#1}}}\newcommand{\hce}[1]{\textcolor{blue}{\ce{#1}}}\newcommand{\hlbox}[1]{\fbox{\textcolor{red}{\gtfamily #1}}}
-%\newcommand{\hl}[1]{\answer{\phantom{あいう}}}\newcommand{\hce}[1]{\fbox{\textcolor{white}{\ce{#1}}}}\newcommand{\hlbox}[1]{\fbox{\phantom{#1}}}
+\newcommand{\hl}[1]{\answer{\textcolor{red}{#1}}}\newcommand{\hce}[1]{\textcolor{blue}{\ce{#1}}}\newcommand{\hlbox}[1]{\fbox{\textcolor{red}{\gtfamily #1}}}\rfoot{解答編}
+%\newcommand{\hl}[1]{\answer{\phantom{あいう}}}\newcommand{\hce}[1]{\fbox{\textcolor{white}{\ce{#1}}}}\newcommand{\hlbox}[1]{\fbox{\phantom{#1}}}\rfoot{空欄編}
 
 \pagestyle{empty}
 
@@ -100,7 +100,7 @@
    \item ナフサの電気分解 \K
   \item \hl{赤熱したコークス}に\hl{水蒸気}を吹き付ける \K\\
   \hce{C + H2O -> H2 + CO}
-  \item \hl{水}(\hl{水酸化ナトリウム水溶液})の電気分解\\
+  \item \hl{水}（\hl{水酸化ナトリウム水溶液}）の電気分解\\
   \hce{2H2O -> 2H2 + O2}
   \item \hl{イオン化傾向}が\hl{\ce{H2}より大きい}金属と希薄強酸\\
   \R \;\ce{Fe + 2HCl -> FeCl2 + H2 ^}\\
@@ -331,7 +331,7 @@
   化学式：\hl{\ce{KClO3}}
   \subsubsection{性質}
   \hl{酸素}の生成（\hl{二酸化マンガン}を触媒に加熱）\\
-  \quad \hce{2KClO3 ->C[MnO2][\Delta] 2KClO + 2O2 ^}
+  \quad \hce{2KClO3 ->C[MnO2][\Delta] 2KCl + 2O2 ^}
   
  \newpage
  \section{酸素}
@@ -417,7 +417,7 @@
    \item 酸化アルミニウムと硫酸\\
    \hce{Al2O3 + 3H2SO4 -> Al2(SO4)3 + 3H2O}
    \item 酸化アルミニウムと水酸化ナトリウム水溶液\\
-   \hce{Al2O3 + 2NaOH -> 3H2O + 2Na[Al(OH)+]}
+   \hce{Al2O3 + 2NaOH + 3H2O -> 2Na[Al(OH)4]}
   \end{itemize}
   \subsection{水}
   \subsubsection{性質}
@@ -473,14 +473,14 @@
     \right.$
     \item \hl{還元}剤としての反応\\
     \hce{H2S -> S + 2H+ + 2e-}
-    \item 重金属イオン\ce{M2+}と\hl{難容性の塩}を生成\\
+    \item 重金属イオン\ce{M^2+}と\hl{難容性の塩}を生成\\
     \hce{M2+ + S^{2-} <=> MS v}
    \end{itemize}
    \subsubsection{製法}
    \begin{itemize}
-    \item 酸化鉄（\ajRoman{2}）と希塩酸\\
+    \item 硫化鉄（\ajRoman{2}）と希塩酸\\
     \hce{FeS + 2HCl -> FeCl2 + H2S ^}
-    \item 酸化鉄（\ajRoman{2}）と希硫酸\\
+    \item 硫化鉄（\ajRoman{2}）と希硫酸\\
     \hce{FeS + H2SO4 -> FeSO4 + H2S ^}
    \end{itemize}
    \subsubsection{反応}
@@ -566,6 +566,8 @@
    \hce{C12H22O11 ->C[H2SO4] 12C + 11H2O}
    \item 水酸化ナトリウムと希硫酸\\
    \hce{H2SO4 + 2NaOH -> Na2SO4 + 2H2O}
+   \item 銅と熱濃硫酸\\
+   \hce{Cu + 2H2SO4 -> CuSO4 + SO2 ^ + 2H2O}
    \item 銀と熱濃硫酸\\
    \hce{2Ag + 2H2SO4 -> Ag2SO4 + SO2 + 2H2O}
    \item 塩化バリウム水溶液と希硫酸\\
@@ -972,17 +974,46 @@ $\left.
   \item \hl{ケイ酸}を加熱してシリカゲルを得る反応\\
   \hce{H2SiO3 ->[][\Delta] SiO2*$n$H2O + $(1-n)$H2O} $(0<n<1)$
  \end{itemize}
+\newpage
+{\Large \gtfamily シリカゲル生成過程での構造変化}
+ \definesubmol\omitline{-[::0,0.8,,,dash dot]}
+ \definesubmol{ONa}{{{}^{-}ONa^{+}}}
+\begin{multicols*}{2}
  \begin{enumerate}
   \item 二酸化ケイ素（シリカ）\ce{SiO2}\\
-  \chemfig{-O-Si(-[2,0.6]O)(-[-2,0.6]O)}
+  \hlbox{\chemfig{
+  !\omitline O-Si(-[2]O!\omitline)(-[-2]O-[-2]Si(-[-4]O!\omitline)(-[-2]O!\omitline)(
+  -O-Si(-[-2]O!\omitline)(-[2]O?[b])-O-Si(-[2,0.7]{OH})(-[-2]O!\omitline)!\omitline
+  ))
+  -O-Si?[b](-[2]O!\omitline)-O-Si(-[2]O!\omitline)(-[-2,0.7]{OH})!\omitline
+  }}
   \item ケイ酸ナトリウム \ce{Na2SiO3}\\
-  
+  \hlbox{\chemfig{
+  !\omitline O-Si(-[2]O!\omitline)(
+  -[-2]O-[-2]Si(-[-4]O!\omitline)(-[-2]!{ONa}!\omitline)(
+  -O-Si(-[-2]!{ONa}!\omitline)(-[2,0.7]!{ONa})-O-Si(-[2,0.7]!{ONa})(-[-2]O!\omitline)!\omitline
+  ))
+  -O-Si(-[2]!{ONa}!\omitline)(-[-2,0.7]!{ONa})-O-Si(-[2]O!\omitline)(-[-2,0.7]!{ONa})!\omitline
+  }}
+\columnbreak
   \item ケイ酸 \ce{SiO2*$n$H2O} $(0 \leqq n \leqq 1)$\\
-  
+  \hlbox{\chemfig{
+  !\omitline O-Si(-[2]O!\omitline)(
+  -[-2]O-[-2]Si(-[-4]O!\omitline)(-[-2]{OH}!\omitline)(
+  -O-Si(-[-2]{OH}!\omitline)(-[2,0.7]{OH})-O-Si(-[2,0.7]{OH})(-[-2]O!\omitline)!\omitline
+  ))
+  -O-Si(-[2]{OH}!\omitline)(-[-2,0.7]{OH})-O-Si(-[2]O!\omitline)(-[-2,0.7]{OH})!\omitline
+  }}
   \item シリカゲル \ce{SiO2*$n$H2O} $(n \ll 1)$\\
-  
+   \hlbox{\chemfig{
+  !\omitline O-Si(-[2]{OH}!\omitline)(
+  -[-2]O-[-2]Si(-[-4]O!\omitline)(-[-2]O!\omitline)(
+  -O-Si(-[-2]O!\omitline)(-[2,0.7]{OH})-O-Si(-[2]O?[c])(-[-2]O!\omitline)!\omitline
+  ))
+  -O-Si(-[2]O!\omitline)(-[-2,0.7]{OH})-O-Si?[c](-[2]O!\omitline)!\omitline
+  }}
  \end{enumerate}
- 
+\end{multicols*}
 \newpage
 \part{典型金属}
  \section{アルカリ金属}
