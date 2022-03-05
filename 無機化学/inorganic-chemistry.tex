@@ -1022,7 +1022,7 @@ $\left.
  \begin{itemize}
   \item 銀白色で\hl{柔らかい}金属
   \item 全体的に反応性が高く、\hl{灯油}中に保存
-  \item 原子一個粗利の自由電子が\hl{1}個（\hl{弱}い\hl{金属}結合）
+  \item 原子一個あたりの自由電子が\hl{1}個（\hl{弱}い\hl{金属}結合）
   \item 還元剤として反応\\
   \hce{M -> M+ + e-}
  \end{itemize}
@@ -1135,7 +1135,7 @@ $\left.
  \coordinate (2) at ($(CaO.east)!0.5!(CaOH2.west)$);
  \node[box] (H2O) at ([yshift=-15mm]2){\hl{\ce{H2O}}};
  \draw[arrow, red] (1)--($(CO2.north)!(1)!(CO2.north east)$);
- \draw[arrow, blue] (2)--(H2O.north);
+ \draw[arrow, blue] (H2O.north)--(2);
  \node[box, right, fill=green!10!white] (NaCl) at(0,-3) {\hl{\ce{NaCl}}};
  \node[box, right] (NaHCO3) at(2.5,-3){\hl{\ce{NaHCO3}}};
  \node[box, right] (Na2CO3) at(6,-3){\hl{\ce{Na2CO3}}};
@@ -1183,7 +1183,7 @@ $\left.
   \item \ce{NaHCO3}
   $\left\{
   \begin{tabular}{ll}
-  \hl{\ce{HCO3- + H+ <=> CO3^{2-}}}&$K_{1}=5.6\times10^{-11}$\\
+  \hl{\ce{HCO3- <=> H+ + CO3^{2-}}}&$K_{1}=5.6\times10^{-11}$\\
   \hl{\ce{HCO3- + H2O <=> CO2 + OH- + H2O}}&$K_{2}=2.3\times10^{-8}$
   \end{tabular}
   \right.$
@@ -1294,7 +1294,7 @@ $\left.
   \hl{水}を加えると、\hl{発熱}・\hl{膨張}・\hl{硬化}して\hl{セッコウ}に戻る\\
   \hce{CaSO4*2H2O <=>T[$\Delta$][加熱] CaSO4*$\dfrac{1}{2}$H2O + $\dfrac{3}{2}$H2O}\\
   \stamp{red}{用途} 医療用ギプス・石膏像・建材
- \subsubsection{硫酸バリウム}
+ \subsection{硫酸バリウム}
  化学式：\hl{\ce{BaSO4}}
  \subsubsection{性質}
  \begin{itemize}
