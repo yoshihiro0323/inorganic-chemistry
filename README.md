@@ -41,6 +41,7 @@
 - fancyhdr
 - hyperref
 - lastpage
+- longtable
 - lscape
 - mhchem
 - multicol
