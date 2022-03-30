@@ -1669,14 +1669,92 @@ $\left.\begin{tabular}{l}
  \hce{Fe + 2HCl -> FeCl2 + H2 ^}\\
  \hce{2FeCl2 + Cl2 -> 2FeCl3}
  \subsection{鉄イオンの反応}
- \begin{tabular}{|c|c|c|c|c|c|}
- \ce{Cu^{2+}}&\hl{\ce{Ca(OH)2 v}}&\hl{\ce{[Ca(NH3)4]^{2+} aq}}&\hl{\ce{[CuCl4]^{2-} aq}}&\hl{\ce{CuS v}}&
+ \begin{tabular}{|c|c|c|c|c|c|}\cline{2-6}
+ \multicolumn{1}{c|}{}&\ce{NaOH}&\ce{K4[Fe(CN)6]}&\ce{K3[Fe(CN)6]}\\ \hline
+ \ce{Fe^{2+}}&\hl{\ce{Fe(OH)2 v}}&\ce{Fe2[Fe(CN)6] v}&\ce{KFe[Fe(CN)6]  v}&\hl{変化なし}&\hl{変化なし}\\
+ \hl{淡緑}色&\hl{緑白}色&\hl{青白}色&\hl{濃青}色&\hl{淡緑}色&\hl{淡緑}色\\ \hline
+ \ce{Fe^{3+}}&\hl{\ce{Fe(OH)3 v}}&\ce{KFe[Fe(CN)6] v}&\ce{Fe[Fe(CN)6]aq}&\hl{\ce{Fe^{2+}aq}}&\ce{[Fe(NCS)]^{2+}}\\
+ \hl{黄褐}色&\hl{赤褐}色&\hl{濃青}色&\hl{暗褐}色&\hl{淡緑}色&\hl{血赤}色\\ \hline
  \end{tabular}
+ \begin{itemize}
+ \item \ce{Fe^2+,Fe^3+}は、\hl{\ce{OH-}}とも\hl{\ce{OH-}}とも錯イオンを形成しない
+ \item ベルリンブルーとターンブルブルーは\hl{同一物質}
+ \end{itemize}
  \subsection{塩化コバルト（\UTF{2161}）}
+ 化学式：\hl{\ce{CoCl2}}
+ \subsubsection{性質}
+ \begin{itemize}
+  \item \hl{青}色で\hl{潮解}性のある固体
+  \item 6水和物は\hl{淡赤}色
+  \item 塩化コバルト紙を用いた\hl{水}の検出
+  \item \ce{CO^3+}は\hl{\ce{NH3}}と錯イオンを形成
+ \end{itemize}
  \subsection{硫酸ニッケル（\UTF{2161}）}
+ 化学式：\hl{\ce{NiSO4}}
+ \begin{itemize}
+  \item 黄緑色で潮解性のある固体
+  \item 6水和物は青緑色
+  \item \ce{Ni^2+}は\hl{\ce{NH3}}と錯イオンを形成
+ \end{itemize}
  \section{銅}
  \subsection{銅}
+ \subsubsection{性質}
+ \begin{itemize}
+  \item \hl{赤}色の金属光沢
+  \item 他の金属とさまざまな色の\hl{合金}
+  \item 展性・延性が\hl{大き}く、電気・熱伝導性が\hl{高}い。
+  \item イオン化傾向が水素より\hl{低}く、酸化力のある酸と反応\\
+  \item 空気中で徐々に酸化して、緻密な錆（\hl{酸}が生成）
+ \end{itemize}
+ \subsubsection{製法}
+ 銅の製錬 \stamp{Sepia}{粗銅}・\hl{電解精錬} \stamp{Maroon}{純銅} \K\\
+ 
+ \subsubsection{反応}
+ \begin{itemize}
+  \item 銅と希硝酸\\
+  \hce{3Cu + 8HNO3 -> 3 Cu(NO3)2 + 4H2O + 2NO ^}
+  \item 銅と濃硝酸\\
+  \hce{Cu + 4HNO3 -> Cu(NO3)2 + 2H2O + 2NO2 ^}
+  \item 銅と熱濃硫酸\\
+  \hce{Cu + 2 H2SO4 -> CuSO4 + 2H2O + SO2 ^}
+ \end{itemize}
  \subsection{硫酸銅（\UTF{2161}）5水和物}
+ \subsubsection{性質}
+ \begin{itemize}
+  \item \hl{青}色の固体（結晶中の\hl{\ce{[Cu(H2O)4]^{2+}}}の色）
+  \item 温度による物質変化\\
+  \begin{tikzpicture}
+  \node (5) at (0,0){5水和物};
+  \node (3) at (3,0){\hl{3水和物}};
+  \node (1) at (6,0){\hl{1水和物}};
+  \node (0) at (9,0){\hl{無水和物}};
+  \node (fin) at (12,0){\hl{酸化銅（\ajRoman{2}）}};
+  \draw[->,thick] (5.east)--node[auto=left] {$102^\circ$C}(3.west);
+  \draw[->,thick] (3.east)--node[auto=left] {$113^\circ$C}(1.west);
+  \draw[->,thick] (1.east)--node[auto=left] {$150^\circ$C}(0.west);
+  \draw[->,thick] (0.east)--node[auto=left] {$650^\circ$C}(fin.west);
+  \node (blue) at ([yshift=-5pt]5.south){\hl{青}色};
+  \node (white) at ([yshift=-5pt]0.south){\hl{白}色};
+  \draw[<-,thick] (blue.east)--node[auto=right] {＋\ce{H2O}（検出）}(white.west);
+  \end{tikzpicture}
+  \item \ce{Cu^2+}による\hl{殺菌}作用（農薬）
+  \item 還元性を持つ有機化合物の検出\footnote{フェーリング液・ベネディクト液}\\
+  \hl{赤}色の酸化銅（\ajRoman{1}）が生成
+ \end{itemize}
+ \subsubsection{製法}
+ 銅に\hl{濃硫酸}をかけてから\hl{加熱}。
+ \subsubsection{反応}
+ \subsection{銅（\UTF{2161}）イオンの反応}
+ \begin{tabular}{|c|c|c|c|c|}\cline{2-5}
+ \multicolumn{1}{c|}{}&少々の塩基&過剰の\ce{NH3}&濃塩酸&\ce{H2S}（\hl{全液性}）\\ \hline
+ \ce{Cu^{2+}}&\hl{\ce{Ca(OH)2 v}}&\hl{\ce{[Ca(NH3)4]^{2+} aq}}&\hl{\ce{[CuCl4]^{2-} aq}}&\hl{\ce{CuS v}}\\
+\hl{青}色&\hl{青白}色&\hl{深青}色&\hl{黄緑}色&\hl{黒}色\\ \hline
+ \end{tabular}
+ \begin{itemize}
+  \item 炎色反応：\hl{青緑}色
+  \item 加熱すると\hl{分解}
+  \item \ce{Cu^2+}は\hl{\ce{NH3}}と錯イオンを形成し、\hl{\ce{OH-}}とは形成しない
+ \end{itemize}
  \section{銀}
  \subsection{銀}
  \section{クロム・マンガン}
