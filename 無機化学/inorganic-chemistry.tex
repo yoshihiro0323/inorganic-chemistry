@@ -1622,9 +1622,9 @@ $\left.\begin{tabular}{l}
  \hl{銑鉄}に高温の\hl{酸素}を吹き付けて\hl{鋼}になる。
  \subsubsection{反応}
  \begin{itemize}
-  \item 塩酸との反応
+  \item 塩酸との反応\\
   \hce{Fe + 2HCl -> FeCl2 + H2 ^}
-  \item 高温の水蒸気との反応
+  \item 高温の水蒸気との反応\\
   \hce{3Fe + 4H2O -> Fe3O4 + 4H2 ^}
   \item 微量に含まれる炭素・鉄・水による\hl{局部電池}（\hl{食塩}などが溶けていたら反応速度上昇）\\
   \begin{tabular}{ll}
@@ -1710,7 +1710,25 @@ $\left.\begin{tabular}{l}
  \end{itemize}
  \subsubsection{製法}
  銅の製錬 \stamp{Sepia}{粗銅}・\hl{電解精錬} \stamp{Maroon}{純銅} \K\\
- 
+ \tikz[remember picture,baseline=(kouro1.base)] \node[draw=black, rectangle, rounded corners=2pt, line width=1pt, inner sep=5pt, outer sep=0pt, right] (kouro1) {\hl{高炉}};\hl{黄銅鉱}（\hl{\ce{CuFeS2}}）・\hl{コークス}・\hl{石灰石}・\hl{ケイ砂}を高温で反応\par
+\begin{quotation}
+\begin{tikzpicture}
+\node (from) at (0,0){\hl{\ce{CuFeS2}}};
+\node[right] (to1) at (3,0.3){\ce{FeSiO3}};
+\node[right] (to2) at (3,-0.3){\ce{Cu2S}};
+\draw[->,thick] (from.east)--(to1.west);
+\draw[->,thick] (from.east)--(to2.west);
+\end{tikzpicture}
+\end{quotation}
+\begin{tikzpicture}[remember picture, baseline=(tenro1.base)]
+ \node[draw=black, rectangle, rounded corners=2pt, line width=1pt, inner sep=5pt, outer sep=0pt, right] (tenro1) {\hl{転炉}};
+ \draw[-latex,very thick,overlay] (kouro1.south)--(tenro1.north);
+\end{tikzpicture}
+硫化銅（\ajRoman{1}）に\hl{酸素}を吹き付けて、\hl{粗銅}にする。
+\begin{quotation}
+\ce{2Cu2S + 3O2 -> 2Cu2O + 2SO2}\par
+\ce{Cu2S + 2Cu2O -> 6Cu + SO2}
+\end{quotation}
  \subsubsection{反応}
  \begin{itemize}
   \item 銅と希硝酸\\
@@ -1757,10 +1775,36 @@ $\left.\begin{tabular}{l}
   \item 加熱すると\hl{分解}
   \item \ce{Cu^2+}は\hl{\ce{NH3}}と錯イオンを形成し、\hl{\ce{OH-}}とは形成しない
  \end{itemize}
+ \subsection{銅の合金}
+ \begin{tabular}{|c|c|c|c|c|}\hline
+ \hl{黄銅}（真鍮）&\hl{洋銀}（洋白）&\hl{白銅}&\hl{青銅}&\hl{ジュラルミン}\\ \hline
+ \hl{\ce{Zn}}&\hl{\ce{Zn,Ni}}&\hl{\ce{Ni}}&\hl{\ce{Sn}}&\hl{\ce{Al}}（主成分）\\ \hline
+ 適度な強度と加工性&柔軟で錆びにくい&柔軟で錆びにくい&硬くて錆びにくい&軽くて丈夫\\
+ 楽器・水道用具&食器・装飾品&五十円玉・五百円玉&像&航空機・車両\\ \hline
+ \end{tabular}
  \section{銀}
  \subsection{銀}
+ \subsubsection{性質}
+ \begin{itemize}
+  \item 展性・延性が\hl{大きく}、電気・熱伝導性が\hl{最も高い}
+  \item イオン化傾向が水素より\hl{小さい}\\
+  \hl{酸化}力のある酸（\hl{硝酸}・\hl{熱濃硫酸}）と反応
+  \item 空気中で酸化しにくいが、\hl{硫化水素}とは容易に反応
+ \end{itemize}
+ \subsubsection{製法}
+  \begin{itemize}
+  \item 銅の電解精錬の\hl{陽極泥} \K
+  \item 銀の化合物の\hl{熱}分解・\hl{光}分解
+ \end{itemize}
+ \subsection{銀（\UTF{2160}）イオンの反応}
+ \subsection{難溶性化合物の溶解性}
  \section{クロム・マンガン}
+ \subsection{単体}
+ \subsection{クロム酸カリウム・二クロム酸カリウム}
+ \subsection{過マンガン酸カリウム}
+ \subsection{マンガンの安定な酸化数}
  \onecolumn
+ \renewcommand{\thesection}{\Alph{section}}
  \setcounter{section}{0}
  \part{APPENDIX}
   \section{気体の乾燥剤}
@@ -1873,4 +1917,6 @@ $\left.\begin{tabular}{l}
 \ce{Ag+}&\hl{\ce{AgCl}}&\hl{沈殿しない}&\hl{\ce{Ag2S}}&\hl{\ce{Ag2S}}&\hl{\ce{Ag2O}}&\hl{\ce{Ag2O}}&\hl{\ce{[Ag(NH3)2]+}}\\ \hline
 &\hl{白}色&\hl{無}色&\hl{黒}色&\hl{黒}色&\hl{褐}色&\hl{褐}色&\hl{無}色\\
  \end{longtable}
+ \newpage
+ \section{金属イオンの系統分離}
 \end{document}
