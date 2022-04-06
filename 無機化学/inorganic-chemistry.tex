@@ -92,21 +92,21 @@
 \renewcommand{\thesection}{\Alph{section}}
 \setcounter{section}{0}
 %\include{children/appendix}
-\begin{tikzpicture}[remember picture]
+\begin{tikzpicture}[process/.style={below right, draw=black, rectangle, semithick, rounded corners=3pt, dash dot},arrow/.style={-Stealth,thick}]
  \node[below right, draw=black, rectangle, rounded corners=4pt, line width=1pt, inner sep=4pt, outer sep=0pt] (begin) {金属イオンの混合溶液};
- \node[below right, draw=black, rectangle, semithick, rounded corners=3pt, dash dot] (1st) at (1,-1){
+ \node[process] (1st) at (1,-1){
  \begin{minipage}{3cm}
  \hl{希塩酸}\\
  $\Rightarrow$\hl{\ce{Cl-}}（\hl{酸}性）
  \end{minipage}
  };
- \node[below right, draw=black, rectangle, semithick, rounded corners=3pt, dash dot] (2nd) at (1,-3){
+ \node[process] (2nd) at (1,-3){
  \begin{minipage}{3cm}
  \hl{硫化水素}\\
  $\Rightarrow$\hl{\ce{S^2-}}（\hl{酸}性）
  \end{minipage}
  };
- \node[below right, draw=black, rectangle, semithick, rounded corners=3pt, dash dot] (3rd) at (1,-5){
+ \node[process] (3rd) at (1,-5){
  \begin{minipage}{5.5cm}
  \begin{enumerate}
  \setlength{\leftskip}{-13pt}
@@ -120,13 +120,13 @@
  \end{enumerate}
  \end{minipage}
  };
- \node[below right, draw=black, rectangle, semithick, rounded corners=3pt, dash dot] (4th) at (1,-11){
+ \node[process] (4th) at (1,-11){
  \begin{minipage}{3.5cm}
  \hl{硫化水素}を加える\\
  \hl{\ce{S^2-}}（\hl{塩基}性）
  \end{minipage}
  };
- \node[below right, draw=black, rectangle, semithick, rounded corners=3pt, dash dot] (5th) at (1,-13){
+ \node[process] (5th) at (1,-13){
  \begin{minipage}{7cm}
  \begin{enumerate}
  \setlength{\leftskip}{-13pt}
@@ -138,14 +138,14 @@
  \end{enumerate}
  \end{minipage}
  };
- \node[below right, draw=black, rectangle, rounded corners=4pt, line width=1pt, inner sep=4pt, outer sep=0pt] (end) at (0,-17) {\hl{\ce{K^+}},\hl{\ce{Na^+}},\hl{\ce{Mg^+}}};
+ \node[below right, draw=black, rectangle, rounded corners=4pt, line width=1pt, inner sep=4pt, outer sep=0pt] (end) at (0,-16.5) {\hl{\ce{K^+}},\hl{\ce{Na^+}},\hl{\ce{Mg^+}}};
  \coordinate (start point) at ($(begin.south west)!0.15!(begin.south east)$);
  \coordinate (end point) at ($(start point) + (end.north west) - (begin.south west)$);
- \draw[-Stealth,thick] (start point) -- (end point);
- \draw[-Stealth,thick] (1st.west) -- ($(start point)!(1st.west)!(end point)$);
- \draw[-Stealth,thick] (2nd.west) -- ($(start point)!(2nd.west)!(end point)$);
- \draw[-Stealth,thick] (3rd.west) -- ($(start point)!(3rd.west)!(end point)$);
- \draw[-Stealth,thick] (4th.west) -- ($(start point)!(4th.west)!(end point)$);
- \draw[-Stealth,thick] (5th.west) -- ($(start point)!(5th.west)!(end point)$);
+ \draw[arrow] (start point) -- (end point);
+ \draw[arrow] (1st.west) -- ($(start point)!(1st.west)!(end point)$);
+ \draw[arrow] (2nd.west) -- ($(start point)!(2nd.west)!(end point)$);
+ \draw[arrow] (3rd.west) -- ($(start point)!(3rd.west)!(end point)$);
+ \draw[arrow] (4th.west) -- ($(start point)!(4th.west)!(end point)$);
+ \draw[arrow] (5th.west) -- ($(start point)!(5th.west)!(end point)$);
  \end{tikzpicture}
 \end{document}
