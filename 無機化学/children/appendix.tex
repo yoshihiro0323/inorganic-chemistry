@@ -112,7 +112,7 @@
  \end{longtable}
  \newpage
  \section{金属イオンの系統分離}
- \begin{tikzpicture}[process/.style={right, draw=black, rectangle, semithick, rounded corners=3pt, dash dot},arrow/.style={-Stealth,thick},extract/.style={right, draw=black, rectangle, semithick, rounded corners=3pt}]
+ \begin{tikzpicture}[process/.style={right, draw=black, rectangle, semithick, rounded corners=3pt, dash dot},arrow/.style={-Stealth,thick},extract/.style={left, draw=black, rectangle, semithick, rounded corners=3pt}]
  \node[below right, draw=black, rectangle, rounded corners=4pt, line width=1pt, inner sep=4pt, outer sep=0pt] (begin) {金属イオンの混合溶液};
  \node[below right, draw=black, rectangle, rounded corners=4pt, line width=1pt, inner sep=4pt, outer sep=0pt] (end) at (0,-22) {\hl{\ce{K^+}},\hl{\ce{Na^+}},\hl{\ce{Mg^+}}};
  \coordinate (start point) at ($(begin.south west)!0.15!(begin.south east)$);
@@ -123,20 +123,17 @@
  \coordinate (extract4) at ([yshift=-16cm]start point);
  \coordinate (extract5) at ([yshift=-20.5cm]start point);
  
- \node[process] (1st) at ([xshift=1cm]$(start point)!0.5!(extract1)$){
- \begin{minipage}{3cm}
- \hl{希塩酸}\\
- $\Rightarrow$\hl{\ce{Cl-}}（\hl{酸}性）
- \end{minipage}
+ \node[process] (1st) at ([xshift=1cm]$(start point)!0.33!(extract1)$){
+ \hl{希塩酸}$\Rightarrow$\hl{\ce{Cl-}}（\hl{酸}性）
  };
  \node[process] (2nd) at ([xshift=1cm]$(extract1)!0.5!(extract2)$){
- \begin{minipage}{3cm}
+ \begin{minipage}{4.5cm}
  \hl{硫化水素}\\
  $\Rightarrow$\hl{\ce{S^2-}}（\hl{酸}性）
  \end{minipage}
  };
  \node[process] (3rd) at ([xshift=1cm]$(extract2)!0.5!(extract3)$){
- \begin{minipage}{7.5cm}
+ \begin{minipage}{8cm}
  \begin{enumerate}
  \setlength{\leftskip}{-13pt}
  \item \hl{煮沸}する$\Rightarrow$\hl{硫化水素}を除去
@@ -149,7 +146,7 @@
  \end{minipage}
  };
  \node[process] (4th) at ([xshift=1cm]$(extract3)!0.5!(extract4)$){
- \begin{minipage}{3.5cm}
+ \begin{minipage}{4cm}
  \hl{硫化水素}を加える\\
  \hl{\ce{S^2-}}（\hl{塩基}性）
  \end{minipage}
@@ -173,7 +170,7 @@
  \draw[arrow] (4th.west) -- ($(start point)!(4th.west)!(end point)$);
  \draw[arrow] (5th.west) -- ($(start point)!(5th.west)!(end point)$);
  
- \node[extract] (group1) at ([xshift=5cm]extract1) {
+ \node[extract] (group1) at ([xshift=15cm]extract1) {
  \begin{tabular}{ll|ll}
  \hl{\ce{AgCl}}&\hl{白}色&\hl{\ce{Hg2Cl2}}&\hl{白}色\\
  \hl{\ce{PbCl2}}&\hl{白}色&&
@@ -193,14 +190,14 @@
  \draw[arrow] (group1-3.west) -- ($(group1-start point)!(group1-3.west)!(group1-end point)$);
  \draw[arrow] ($(group1-start point)!(group1-4.east)!(group1-end point)$) -- (group1-4.east);
  
- \node[extract] (group2) at ([xshift=5cm]extract2) {
+ \node[extract] (group2) at ([xshift=11cm]extract2) {
  \begin{tabular}{ll|ll}
  \hl{\ce{HgS}}&\hl{黒}色&\hl{\ce{CuS}}&\hl{黒}色\\
  \hl{\ce{SnS}}&\hl{褐}色&\hl{\ce{CdS}}&\hl{黄}色\\
  （\hl{\ce{PbCl2}}&\hl{黒}色）&&
  \end{tabular}
  };
- \node[extract, above] (group2-result) at ([yshift=-4cm]$(group2.south)!1.3!(group2.south east)$){\hl{\ce{Cu^2+}}};
+ \node[extract, above] (group2-result) at ([yshift=-4cm,xshift=3cm]group2.south east){\hl{\ce{Cu^2+}}};
  \coordinate (group2-end point) at (group2-result.north);
  \coordinate (group2-start point) at ([yshift=-0.5cm]$(group2.west)!(group2-end point)!(group2.east)$);
  \draw[arrow] (group2.east) -| (group2-end point);
@@ -218,7 +215,7 @@
  \draw[arrow] (group2-5.west) -- ($(group2-start point)!(group2-5.west)!(group2-end point)$);
  \draw[arrow] ($(group2-start point)!(group2-6.east)!(group2-end point)$) -- (group2-6.east);
  
- \node[extract] (group3) at ([xshift=4cm]extract3) {
+ \node[extract] (group3) at ([xshift=12cm]extract3) {
  \begin{tabular}{ll|ll}
  \hl{\ce{Fe(OH)3}}&\hl{淡緑}色&\hl{\ce{Cr(OH)3}}&\hl{黒}色\\
  \hl{\ce{Al(OH)3}}&\hl{白}色&&
@@ -227,14 +224,14 @@
  \node[process] (group3-1) at ([xshift=1cm]group3.east){沈澱の色};
  \draw[arrow] (group3-1.west) -- ($(group3.north east)!(group3-1.west)!(group3.south east)$);
  
- \node[extract] (group4) at ([xshift=4cm]extract4) {
+ \node[extract] (group4) at ([xshift=11cm]extract4) {
  \begin{tabular}{ll|ll}
  \hl{\ce{NiS}}&\hl{黒}色&\hl{\ce{CoS}}&\hl{黒}色\\
  \hl{\ce{ZnS}}&\hl{白}色&\hl{\ce{MnS}}&\hl{淡黄}色\\
  \end{tabular}
  };
  \node[process] (group4-1) at ([xshift=1cm]group4.east){
- \begin{minipage}{5.2cm}
+ \begin{minipage}{6.2cm}
  沈澱の色・元の混合溶液の色\\
  \begin{tabular}{l|l}
  \ce{Ni^2+}\hl{緑}色&\ce{Co^2+}\hl{淡赤}色
@@ -242,7 +239,7 @@
  \end{minipage}};
  \draw[arrow] (group4-1.west) -- ($(group4.north east)!(group4-1.west)!(group4.south east)$);
  
- \node[extract] (group5) at ([xshift=4cm]extract5) {
+ \node[extract] (group5) at ([xshift=11cm]extract5) {
  \begin{tabular}{ll|ll}
  \hl{\ce{CaCO3}}&\hl{白}色&\hl{\ce{BaCO3}}&\hl{白}色\\
  \hl{\ce{StCO3}}&\hl{白}色&&

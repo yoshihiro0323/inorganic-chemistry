@@ -33,7 +33,7 @@
           line width=.5pt, inner sep=2pt, outer sep=0pt
           ] (num){\addtocounter{answer}{1}\arabic{answer}};
    \node [right, inner sep=1pt, outer sep=0pt] (text) at (num.east){#1};
-   \draw [line width=.5pt, outer sep=0pt] (num.south)--($(text.base east)-(num.base west)+(num.south)+(-5pt,0)$);
+   %\draw [line width=.5pt, outer sep=0pt] (num.south)--($(text.base east)-(num.base west)+(num.south)+(-5pt,0)$);
   \end{tikzpicture}%
 }
 \newcounter{answer}
@@ -86,10 +86,11 @@
 
 \hypertarget{top}{\tableofcontents}
 \onecolumn
-%\include{children/non‐metallic}
-%\include{children/representative}
-%\include{children/transition}
+\include{children/non‐metallic}
+\include{children/representative}
+\include{children/transition}
 \renewcommand{\thesection}{\Alph{section}}
+\setcounter{answer}{0}
 \setcounter{section}{0}
 \include{children/appendix}
 \end{document}
