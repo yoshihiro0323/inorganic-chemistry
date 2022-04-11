@@ -33,7 +33,7 @@
  \begin{tabular}{|c|c|c|c|c|}\hline
  軟鋼&\hl{鉄鋼}&\hl{銑鉄}&\hl{ステンレス鋼}&KS磁石鋼\\ \hline
  C0.2\% 未満&C2\% 未満&C2\% 以上&\hl{\ce{Cr,Ni}}&\ce{Co,W,Cr}\\ \hline
- 加工しやすい&硬くて弾性あり&硬くてもろい&錆びにくい&　\\
+ 加工しやすい&硬くて弾性あり&硬くてもろい&錆びにくい&　\\ \hline
  鉄筋・鉄骨&レール・バネ&鋳物&キッチン&人工永久磁石\\ \hline
  \end{tabular}
  \newpage
@@ -104,12 +104,12 @@ $\left.\begin{tabular}{l}
   （エバンスの実験）
  \end{itemize}
  \subsection{硫酸鉄（\UTF{2161}）7水和物}
- 化学式：\hl{\ce{FeSO4*7H2O}}\\
+ 化学式：\hl{\ce{FeSO4*7H2O}}
  \subsubsection{性質}
  \begin{itemize}
   \item \hl{青緑}色の固体
   \item \ce{Fe^{2+}}半反応式\\
-  \hl{\ce{Fe^{2+} -> Fe^{3+} + e-}}
+  \hce{Fe^{2+} -> Fe^{3+} + e-}
   \item 空気中で表面が\hl{\ce{Fe2(SO4)3}}（\hl{黄褐}色）
  \end{itemize}
  \subsubsection{製法}
@@ -133,14 +133,14 @@ $\left.\begin{tabular}{l}
  \hce{2FeCl2 + Cl2 -> 2FeCl3}
  \subsection{鉄イオンの反応}
  \begin{tabular}{|c|c|c|c|c|c|}\cline{2-6}
- \multicolumn{1}{c|}{}&\ce{NaOH}&\ce{K4[Fe(CN)6]}&\ce{K3[Fe(CN)6]}\\ \hline
+ \multicolumn{1}{c|}{}&\ce{NaOH}&\ce{K4[Fe(CN)6]}&\ce{K3[Fe(CN)6]}&\ce{H2S}（酸性）&\ce{KSCN}\\ \hline
  \ce{Fe^{2+}}&\hl{\ce{Fe(OH)2 v}}&\ce{Fe2[Fe(CN)6] v}&\ce{KFe[Fe(CN)6]  v}&\hl{変化なし}&\hl{変化なし}\\
  \hl{淡緑}色&\hl{緑白}色&\hl{青白}色&\hl{濃青}色&\hl{淡緑}色&\hl{淡緑}色\\ \hline
  \ce{Fe^{3+}}&\hl{\ce{Fe(OH)3 v}}&\ce{KFe[Fe(CN)6] v}&\ce{Fe[Fe(CN)6]aq}&\hl{\ce{Fe^{2+}aq}}&\ce{[Fe(NCS)]^{2+}}\\
  \hl{黄褐}色&\hl{赤褐}色&\hl{濃青}色&\hl{暗褐}色&\hl{淡緑}色&\hl{血赤}色\\ \hline
  \end{tabular}
  \begin{itemize}
- \item \ce{Fe^2+,Fe^3+}は、\hl{\ce{OH-}}とも\hl{\ce{OH-}}とも錯イオンを形成しない
+ \item \ce{Fe^2+,Fe^3+}は、\hl{\ce{OH-}}とも\hl{\ce{NH3}}とも錯イオンを形成しない
  \item ベルリンブルーとターンブルブルーは\hl{同一物質}
  \end{itemize}
  \subsection{塩化コバルト（\UTF{2161}）}
@@ -178,8 +178,8 @@ $\left.\begin{tabular}{l}
 \node (from) at (0,0){\hl{\ce{CuFeS2}}};
 \node[right] (to1) at (3,0.3){\ce{FeSiO3}};
 \node[right] (to2) at (3,-0.3){\ce{Cu2S}};
-\draw[->,thick] (from.east)--(to1.west);
-\draw[->,thick] (from.east)--(to2.west);
+\draw[-latex,thick] (from.east)--(to1.west);
+\draw[-latex,thick] (from.east)--(to2.west);
 \end{tikzpicture}
 \end{quotation}
 \begin{tikzpicture}[remember picture, baseline=(tenro.base)]
@@ -267,8 +267,10 @@ $\left.\begin{tabular}{l}
   \begin{itemize}
   \item 銅の電解精錬の\hl{陽極泥} \K
   \item 銀の化合物の熱分解・光分解\\
-  酸化銀の熱分解 \hce{2Ag2O -> 4Ag + O2}\\
-  ハロゲン化銀\ce{AgX}の感光 \hce{2AgX -> 2Ag + X2}
+  酸化銀の熱分解\\
+  \hce{2Ag2O -> 4Ag + O2}\\
+  ハロゲン化銀\ce{AgX}の感光\\
+  \hce{2AgX -> 2Ag + X2}
  \end{itemize}
  \subsubsection{反応}
  \begin{itemize}
@@ -310,6 +312,7 @@ $\left.\begin{tabular}{l}
  \ce{AgI v}&\hl{黄}色&\hl{溶けない}&\hl{溶けない}&\hl{溶ける}&\hl{溶ける}\\ \hline
  溶解している物質&\hl{無}色&\hl{\ce{Ag+(AgNO3)}}&\hl{\ce{[Ag(NH3)2]+}}&\hl{\ce{[Ag(S2O3)2]^3-}}&\hl{\ce{[Ag(CN)2]-}}\\ \hline
  \end{tabular}
+ \newpage
  \section{クロム・マンガン}
  化学式：\hl{\ce{Cr}}・\hl{\ce{Mn}}
  \subsection{単体}
@@ -337,7 +340,7 @@ $\left.\begin{tabular}{l}
   \hl{塩基}性・\hl{黄}色&&\hl{酸}性・\hl{赤橙}色
   \end{tabular}
   \item \hl{酸化}剤として反応 \stamp{teal}{二クロム酸カリウム}\\
-  \hl{\ce{Cr2O7^{2-} + 14H+ + 6e- <=> 2Cr^{3+} + 7H2O}}（\hl{硫酸酸性}下）
+  \hce{Cr2O7^{2-} + 14H+ + 6e- -> 2Cr^{3+} + 7H2O}（\hl{硫酸酸性}下）
  \end{itemize}
  \subsubsection{製法}
  \begin{enumerate}
@@ -364,8 +367,8 @@ $\left.\begin{tabular}{l}
   \item \hl{黒紫}色の固体
   \item \hl{酸化}剤として反応\\
   \begin{tabular}{cl}
-  \hl{硫酸}酸性&\hl{\ce{MnO4- + 8H+ + 5e- -> Mn^2+ + 4H2O}}\\
-  中・塩基性&\hl{\ce{MnO4- + 2H2O + 3e- -> MnO2 + 4OH-}}
+  \hl{硫酸}酸性&\hce{MnO4- + 8H+ + 5e- -> Mn^2+ + 4H2O}\\
+  中・塩基性&\hce{MnO4- + 2H2O + 3e- -> MnO2 + 4OH-}
   \end{tabular}
  \end{itemize}
  \subsubsection{製法}
