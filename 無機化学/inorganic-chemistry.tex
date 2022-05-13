@@ -26,24 +26,24 @@
 \def\subsubsection{\@startsection {subsubsection}{1}{\z@}{-2.5ex plus -1ex minus -.2ex}{.3 ex plus .2ex}{\large \sffamily}}
 \makeatother
 
-\newcommand{\answer}[1]{\!
-  \begin{tikzpicture}[baseline=(num.base),font=\sffamily\small]
-   \node[draw=black, rectangle, rounded corners=2pt,
+\newcommand{\answer}{%
+  \begin{tikzpicture}[baseline=(num.base),font=\sffamily\footnotesize]
+   \node[draw=black, rectangle, rounded corners=1.5pt,
           text=black,
-          line width=.5pt, inner sep=2pt, outer sep=0pt
+          line width=.5pt, inner sep=1pt, outer sep=0pt
           ] (num){\addtocounter{answer}{1}\arabic{answer}};
-   \node [right, inner sep=1pt, outer sep=0pt] (text) at (num.east){#1};
+   %\node [right, inner sep=1pt, outer sep=0pt] (text) at (num.east){#1};
    %\draw [line width=.5pt, outer sep=0pt] (num.south)--($(text.base east)-(num.base west)+(num.south)+(-5pt,0)$);
   \end{tikzpicture}%
 }
 \newcounter{answer}
-\newcommand{\hl}[1]{\answer{\textcolor{red}{#1}}}\newcommand{\hce}[1]{\textcolor{blue}{\ce{#1}}}\newcommand{\hlbox}[1]{\fbox{\textcolor{red}{\gtfamily #1}}}\rfoot{解答編}
-%\newcommand{\hl}[1]{\answer{\phantom{あいう}}}\newcommand{\hce}[1]{\fbox{\textcolor{white}{\ce{#1}}}}\newcommand{\hlbox}[1]{\fbox{\phantom{#1}}}\rfoot{空欄編}
+%\newcommand{\hl}[1]{\answer\textcolor{orange}{\sffamily#1}}\newcommand{\hce}[1]{\textcolor{blue}{\ce{#1}}}\newcommand{\hlbox}[1]{\fbox{\textcolor{orange}{\gtfamily #1}}}\rfoot{解答編}
+\newcommand{\hl}[1]{\answer{\phantom{あいう}}}\newcommand{\hce}[1]{\fbox{\textcolor{white}{\ce{#1}}}}\newcommand{\hlbox}[1]{\fbox{\phantom{#1}}}\rfoot{空欄編}
 
 \pagestyle{empty}
 
 \newcommand{\stamp}[2]{%
-  \begin{tikzpicture}[baseline=(A.base),font=\sffamily\small]
+  \begin{tikzpicture}[baseline=(A.base),font=\sffamily]
     \node[draw=#1, rectangle, rounded corners=2pt,
           text=#1,
           fill=#1!10!white,

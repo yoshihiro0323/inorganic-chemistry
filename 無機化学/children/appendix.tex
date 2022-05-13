@@ -94,7 +94,7 @@
   \begin{tabular}{|c|c|c|c|c|c|c|}\hline
   配位子&\ce{NH3}&\ce{CN-}&\ce{H2O}&\ce{OH-}&\ce{Cl-}&\ce{H2N - CH2CH2 - NH2}\\ \hline
   名称&\hl{アンミン}&\hl{シアニド}&\hl{アクア}&\hl{ヒドロキシド}&\hl{クロリド}&\hl{エチレンジアミン}\\ \hline
-  \end{tabular}
+  \end{tabular}\\
   エチレンジアミン$\cdots$1分子あたり2か所で\hl{配位}結合する（2座配位子）（\hl{キレート}錯体）\\
   \hlbox{\chemfig{
   Cu(-[1,1.5,,,latex-]{NH_{2}}-[:120]{CH_{2}}?[a])(-[3,1.5,,,latex-]{H_{2}N}-[:60]{H_{2}C}?[a])(-[-1,1.5,,,latex-]{NH_{2}}-[:-120]{CH_{2}}?[b])(-[-3,1.5,,,latex-]{H_{2}N}-[:-60]{H_{2}C}?[b])
@@ -182,7 +182,7 @@
  \draw[arrow] (group1-start point) -- (group1-end point);
  \node[process] (group1-1) at ([xshift=1cm]$(group1-start point)!0.2!(group1-end point)$){\hl{熱水}を加える};
  \node[extract, left] (group1-2) at ([xshift=-1cm]$(group1-start point)!0.4!(group1-end point)$){\hl{\ce{Pb^2+}}};
- \node[process] (group1-3) at ([xshift=1cm]$(group1-start point)!0.6!(group1-end point)$){\hl{熱水}を加える};
+ \node[process] (group1-3) at ([xshift=1cm]$(group1-start point)!0.6!(group1-end point)$){\hl{アンモニア水}を加える};
  \node[extract, left] (group1-4) at ([xshift=-1cm]$(group1-start point)!0.8!(group1-end point)$){\hl{\ce{Ag+}}};
  
  \draw[arrow] (group1-1.west) -- ($(group1-start point)!(group1-1.west)!(group1-end point)$);
@@ -197,7 +197,7 @@
  （\hl{\ce{PbCl2}}&\hl{黒}色）&&
  \end{tabular}
  };
- \node[extract, above] (group2-result) at ([yshift=-4cm,xshift=3cm]group2.south east){\hl{\ce{Cu^2+}}};
+ \node[extract, above] (group2-result) at ([yshift=-4cm,xshift=3.5cm]group2.south east){\hl{\ce{Cu^2+}}};
  \coordinate (group2-end point) at (group2-result.north);
  \coordinate (group2-start point) at ([yshift=-0.5cm]$(group2.west)!(group2-end point)!(group2.east)$);
  \draw[arrow] (group2.east) -| (group2-end point);
