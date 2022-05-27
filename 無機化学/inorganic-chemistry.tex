@@ -38,13 +38,11 @@
           text=black,
           line width=.5pt, inner sep=1pt, outer sep=0pt
           ] (num){\addtocounter{answer}{1}\arabic{answer}};
-   %\node [right, inner sep=1pt, outer sep=0pt] (text) at (num.east){#1};
-   %\draw [line width=.5pt, outer sep=0pt] (num.south)--($(text.base east)-(num.base west)+(num.south)+(-5pt,0)$);
   \end{tikzpicture}%
 }
 \newcounter{answer}
 \newcommand{\hl}[1]{\answer\textcolor{orange}{\sffamily#1}}\newcommand{\hce}[1]{\textcolor{blue}{\rfamily\ce{#1}}}\newcommand{\hlbox}[1]{\fbox{\textcolor{orange}{\gtfamily #1}}}\rfoot{解答編}
-%\newcommand{\hl}[1]{\answer{\phantom{あいう}}}\newcommand{\hce}[1]{\fbox{\textcolor{white}{\ce{#1}}}}\newcommand{\hlbox}[1]{\fbox{\phantom{#1}}}\rfoot{空欄編}
+% \newcommand{\hl}[1]{\answer{\phantom{\sffamily#1}}}\newcommand{\hce}[1]{\fbox{\textcolor{white}{\rfamily\ce{#1}}}}\newcommand{\hlbox}[1]{\fbox{\phantom{#1}}}\rfoot{空欄編}
 
 \pagestyle{empty}
 
