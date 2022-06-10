@@ -36,14 +36,14 @@
    \node[draw=black, rectangle, rounded corners=2pt,
           text=black, solid,
           line width=.5pt, inner sep=1pt, outer sep=0pt
-          ] (num) {\addtocounter{answer}{1}\arabic{answer}};
+          ] (num){\addtocounter{answer}{1}\arabic{answer}};
   \end{tikzpicture}%
 }
 \newcounter{answer}
-\newcommand{\hl}[1]{\answer\textcolor{red}{\sffamily#1}}
-\newcommand{\hce}[1]{\textcolor{blue}{\rfamily \ce{#1}}}
-\newcommand{\hlbox}[1]{\fbox{\textcolor{red}{\rfamily #1}}}
- \rfoot{解答編}
+
+\newcommand{\hl}[1]{\answer{\hspace*{2\zw}}}
+\newcommand{\hce}[1]{\fbox{\textcolor{white}{\rfamily\ce{#1}}}}
+\newcommand{\hlbox}[1]{\fbox{\phantom{\rfamily#1}}}
 
 \pagestyle{empty}
 
@@ -64,6 +64,7 @@
 \pagestyle{fancy}
 \lfoot{\hyperlink{top}{無機化学}}
 \cfoot{\sffamily \thepage/\pageref{LastPage}}
+\rfoot{空欄編}
 
 \hypersetup{
  bookmarks=false,
