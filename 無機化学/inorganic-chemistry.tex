@@ -10,12 +10,12 @@
 \usepackage{amsmath}
 \usepackage{chemfig}
 \usepackage{fancyhdr}
-\usepackage{lastpage}
 \usepackage{hyperref}
 \usepackage{ascmac}
 \usepackage{multicol}
 \usepackage{amssymb}
 \usepackage{longtable}
+\usepackage{graphicx}
 
 \usepackage{luatexja-otf}
 \usepackage[no-math]{luatexja-fontspec}
@@ -26,8 +26,8 @@
 \usetikzlibrary{calc}
 
 \makeatletter
-\def\section{\@startsection {section}{1}{\z@}{-2.5ex plus -1ex minus -.2ex}{2.5 ex plus .2ex}{\Large \bfseries \sffamily}}
-\def\subsection{\@startsection {subsection}{1}{\z@}{-1.5ex plus -1ex minus -.2ex}{2.3 ex plus .2ex}{\Large \sffamily}}
+\def\section{\@startsection {section}{1}{\z@}{-1.5ex plus -1ex minus -.2ex}{1.5 ex plus .2ex}{\Large \bfseries \sffamily}}
+\def\subsection{\@startsection {subsection}{1}{\z@}{-1.5ex plus -1ex minus -.2ex}{1.3 ex plus .2ex}{\Large \sffamily}}
 \def\subsubsection{\@startsection {subsubsection}{1}{\z@}{-1.5ex plus -1ex minus -.2ex}{.3 ex plus .2ex}{\large \sffamily}}
 \makeatother
 
@@ -63,7 +63,7 @@
 
 \pagestyle{fancy}
 \lfoot{\hyperlink{top}{無機化学}}
-\cfoot{\sffamily \thepage/\pageref{LastPage}}
+\cfoot{\sffamily \thepage}
 
 \hypersetup{
  bookmarks=false,
@@ -75,13 +75,10 @@
 }
 
 \begin{document}
+\thispagestyle{empty}
+\clearpage
+\addtocounter{page}{-1}
 
-%\setchemfig{debug=true}
-%\setcharge{debug}
-
-\thispagestyle{fancy}
-
-\twocolumn
 \twocolumn[
   \begin{center}
     \Huge{\gtfamily 無機化学}\\
@@ -98,4 +95,24 @@
 \setcounter{answer}{0}
 \setcounter{section}{0}
 \include{children/appendix}
+\newpage
+\thispagestyle{empty}
+\vspace*{\fill}
+\begin{center}
+  \Large \sffamily
+  {\Huge \bfseries 無機化学}\\
+  \vspace{1.5\zw}
+  \begin{tabular}{rl}
+    編集&三枝 義啓\\
+    表紙&浪越 秋帆\\
+    バージョン&3.1.0\\
+    コンパイラ&Lua\LaTeX\\
+    出力日&\the\year .\the\month .\the\day
+  \end{tabular}\\
+  \vspace{1\zw}
+  \begin{tabular}{|c|c|c|}\hline
+  最新版&旧版&ソースコード\\
+  \includegraphics[width=2cm]{assets/latest.png}&\includegraphics[width=2cm]{assets/releases.png}&\includegraphics[width=2cm]{assets/source.png}\\ \hline
+  \end{tabular}
+\end{center}
 \end{document}
