@@ -253,7 +253,7 @@
 \newpage
 \section{酸素}
 \subsection{酸素原子}
-同\hl{位}体：酸素(\ce{O2}),\hl{オゾン}(\ce{O3})\\
+同\hl{素}体：酸素(\ce{O2}),\hl{オゾン}(\ce{O3})\\
 \quad 地球の地殻に\hl{最も多く}存在
 \begin{itembox}[l]{地球の地殻における元素の存在率}
       \begin{tabular}{ccccccccccc}
@@ -541,7 +541,7 @@
 \end{itemize}
 \subsubsection{製法}
 \begin{itemize}
-      \item \hl{液体窒素の分留} \K
+      \item \hl{液体空気の分留} \K
       \item \hl{亜硝酸アンモニウム}の\hl{熱分解}\\
             \hce{NH4NO2 ->[][\Delta] N2 + 2H2O}
 \end{itemize}
@@ -569,13 +569,13 @@
       \item \hl{塩基}性\\
             \hl{\ce{NH3 + H2O <=> NH4+ + OH-}} \\
             \hfill $K_{1}=1.7\times10^{-5}$ mol/L
-      \item \hl{塩素}の検出
+      \item \hl{塩酸}の検出
       \item 高温・高圧で二酸化炭素と反応して、\hl{尿素}を生成
 \end{itemize}
 \subsubsection{製法}
 \begin{itemize}
       \item \hl{ハーバーボッシュ法} \K\\
-            \hl{低}温\hl{高}圧で、\hl{四酸化三鉄}（\hl{\ce{Fe3O4}}）触媒\\
+            \hl{高}温\hl{高}圧で、\hl{四酸化三鉄}（\hl{\ce{Fe3O4}}）触媒\\
             \hce{N2 + 3H2 <=> 2NH3}
       \item \hl{塩化アンモニウム}と\hl{水酸化カルシウム}を混ぜて加熱\\
             \hce{2NH4Cl + Ca(OH)2 -> 2NH3 ^ + CaCl2 +2H2O}
@@ -584,7 +584,7 @@
 \begin{itemize}
       \item 硫酸とアンモニア\\
             \hce{2NH3 + H2SO4 -> (NH4)2SO4}
-      \item 塩素の検出\\
+      \item 塩酸の検出\\
             \hce{NH3 + HCl -> NH4Cl v}
       \item アンモニアと二酸化炭素\\
             \hce{2NH3 + CO2 -> (NH2)2CO + H2O}
@@ -692,7 +692,7 @@
       毒性                                                                                                                                                                                                                                                                                                                                                                    & \hl{猛毒}       & \hl{微毒}                                    & \hl{微毒}            \\ \hline
       構造                                                                                                                                                                                                                                                                                                                                                                    &
       \chemfig{P(-[:45,0.8]P?[a])(-[:-30,0.8]P?[a]?[b])-[,,,,black,line width=0.5pt,dash pattern=on 1pt off 0.7pt]P?[a]?[b]}                                                                                                                                                                                                                                                &
-      \chemfig{-[,0.6,,,black,line width=0.5pt,dash pattern=on 2pt off 1.4pt]P(-[:45,0.8]P?[a])(-[:-30,0.8]P?[a]?[b])-[,,,,black,line width=0.5pt,dash pattern=on 1pt off 0.7pt]P?[a]?[b]-[,0.6]P(-[:45,0.8]P?[c])(-[:-30,0.8]P?[c]?[d])-[,,,,black,line width=0.5pt,dash pattern=on 1pt off 0.7pt]P?[c]?[d]-[,0.6,,,black,line width=0.5pt,dash pattern=on 2pt off 1.4pt]} & 略                                                                               \\ \hline
+      \chemfig{-[,0.6,,,black,line width=0.5pt,dash pattern=on 2pt off 1.4pt]P(-[:45,0.8]P?[a])(-[:-30,0.8]P?[a]?[b])-[,,,,white]P?[a]?[b]-[,0.6]P(-[:45,0.8]P?[c])(-[:-30,0.8]P?[c]?[d])-[,,,,white]P?[c]?[d]-[,0.6,,,black,line width=0.5pt,dash pattern=on 2pt off 1.4pt]} & 略                                                                               \\ \hline
       \ce{CS2}への溶解                                                                                                                                                                                                                                                                                                                                                          & \hl{溶ける}      & \hl{溶けない}                                  & \hl{溶けない}          \\ \hline
 \end{tabular}\\
 \subsubsection{製法}
@@ -887,11 +887,13 @@ $\left.
             \hce{NaSiO3 + 2HCl -> H2SiO3 v + 2NaCl}
       \item \hl{ケイ酸}を加熱してシリカゲルを得る反応\\
             \hce{H2SiO3 ->[][\Delta] SiO2*$n$H2O + $(1-n)$H2O} $(0<n<1)$
+      \item \hl{ケイ酸}を高温（$600^{\circ}$C）で熱分解\\
+            \hce{H2SiO3 ->[][\Delta] SiO2 + H2O} $(0<n<1)$
 \end{itemize}
 \newpage
 {\Large \gtfamily シリカゲル生成過程での構造変化}
 \definesubmol\omitline{-[::0,0.8,,,dash dot]}
-\definesubmol{ONa}{{{}^{-}ONa^{+}}}
+\definesubmol{ONa}{O^{-}Na^{+}}
 \begin{multicols*}{2}
       \begin{enumerate}
             \item 二酸化ケイ素（シリカ）\ce{SiO2}\\
@@ -912,19 +914,19 @@ $\left.
             \item ケイ酸 \ce{SiO2*$n$H2O} $(0 \leqq n \leqq 1)$\\
                   \hlbox{\chemfig{
                   !\omitline O-Si(-[2]O!\omitline)(
-                  -[-2]O-[-2]Si(-[-4]O!\omitline)(-[-2]{OH}!\omitline)(
-                  -O-Si(-[-2]{OH}!\omitline)(-[2,0.7]{OH})-O-Si(-[2,0.7]{OH})(-[-2]O!\omitline)!\omitline
+                  -[-2]O-[-2]Si(-[-4]O!\omitline)(-[-2]OH!\omitline)(
+                  -O-Si(-[-2]OH!\omitline)(-[2,0.7]OH)-O-Si(-[2,0.7]OH)(-[-2]O!\omitline)!\omitline
                   ))
-                  -O-Si(-[2]{OH}!\omitline)(-[-2,0.7]{OH})-O-Si(-[2]O!\omitline)(-[-2,0.7]{OH})!\omitline
+                  -O-Si(-[2]OH!\omitline)(-[-2,0.7]OH)-O-Si(-[2]O!\omitline)(-[-2,0.7]OH)!\omitline
                   }}
                   \columnbreak
             \item シリカゲル \ce{SiO2*$n$H2O} $(n \ll 1)$\\
                   \hlbox{\chemfig{
-                  !\omitline O-Si(-[2]{OH}!\omitline)(
+                  !\omitline O-Si(-[2]OH !\omitline)(
                   -[-2]O-[-2]Si(-[-4]O!\omitline)(-[-2]O!\omitline)(
-                  -O-Si(-[-2]O!\omitline)(-[2,0.7]{OH})-O-Si(-[2]O?[c])(-[-2]O!\omitline)!\omitline
+                  -O-Si(-[-2]O!\omitline)(-[2,0.7]OH)-O-Si(-[2]O?[c])(-[-2]O!\omitline)!\omitline
                   ))
-                  -O-Si(-[2]O!\omitline)(-[-2,0.7]{OH})-O-Si?[c](-[2]O!\omitline)!\omitline
+                  -O-Si(-[2]O!\omitline)(-[-2,0.7]OH)-O-Si?[c](-[2]O!\omitline)!\omitline
                   }}
       \end{enumerate}
 \end{multicols*}
